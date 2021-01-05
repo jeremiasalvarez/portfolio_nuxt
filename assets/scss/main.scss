@@ -9,6 +9,7 @@ $primary-invert: findColorInvert($primary);
 $twitter: #4099FF;
 $twitter-invert: findColorInvert($twitter);
 
+$info: $info-dark;
 // Lists and maps
 $custom-colors: null !default;
 $custom-shades: null !default;
@@ -76,6 +77,16 @@ $colors: mergeColorMaps(
 $link: $primary;
 $link-invert: $primary-invert;
 $link-focus-border: $primary;
+
+/*BODY*/
+$body-background-color: rgb(228, 224, 224);
+
+/*NAVBAR*/
+$navbar-padding-horizontal: 10rem;
+$navbar-item-hover-background-color: unset !important;
+$navbar-item-color: #fff;
+$navbar-item-hover-color: #ccc !important;
+
 
 // Import Bulma and Buefy styles
 @import "~bulma";
