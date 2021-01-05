@@ -84,9 +84,9 @@ $body-background-color: rgb(228, 224, 224);
 /*NAVBAR*/
 $navbar-padding-horizontal: 10rem;
 $navbar-item-hover-background-color: unset !important;
-$navbar-item-color: #fff;
-$navbar-item-hover-color: #ccc !important;
-
+$navbar-item-hover-color: #ddd !important;
+$navbar-item-color: #eee;
+$navbar-background-color: $info;
 
 // Import Bulma and Buefy styles
 @import "~bulma";

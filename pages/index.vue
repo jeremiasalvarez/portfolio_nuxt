@@ -1,6 +1,6 @@
 <template>
-  <section class="section">
-    <div class="columns is-mobile">
+	<section class="section">
+		<!-- <div class="columns is-mobile">
       <card title="Free" icon="github">
         Open source on <a href="https://github.com/buefy/buefy"> GitHub </a>
       </card>
@@ -17,18 +17,18 @@
       <card title="Lightweight" icon="arrange-bring-to-front">
         No other internal dependency
       </card>
-    </div>
-  </section>
+    </div> -->
+	</section>
 </template>
 
 <script>
-import Card from '~/components/Card'
+	// import Card from '~/components/Card';
 
-export default {
-  name: 'HomePage',
+	// export default {
+	// 	name: 'HomePage',
 
-  components: {
-    Card,
-  },
-}
+	// 	components: {
+	// 		Card
+	// 	}
+	// };
 </script>
