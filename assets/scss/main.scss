@@ -78,6 +78,13 @@ $link: $primary;
 $link-invert: $primary-invert;
 $link-focus-border: $primary;
 
+/*HELPERS*/
+
+.m-auto{ 
+    margin: auto;
+}
+
+
 /*BODY*/
 $body-background-color: rgb(228, 224, 224);
 
@@ -91,3 +98,5 @@ $navbar-background-color: $info;
 // Import Bulma and Buefy styles
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
+
+@import "~@creativebulma/bulma-divider";

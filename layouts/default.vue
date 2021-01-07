@@ -2,7 +2,7 @@
 	<div>
 		<Navbar />
 
-		<div class="container column is-10">
+		<div>
 			<nuxt />
 		</div>
 	</div>

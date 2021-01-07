@@ -6,7 +6,7 @@
 		<template slot="end">
 			<b-navbar-item class="nav-link" href="#"> Inicio </b-navbar-item>
 			<b-navbar-item class="nav-link" href="#info">
-				¿Quien Soy?
+				Información
 			</b-navbar-item>
 			<b-navbar-item class="nav-link" href="#projects">
 				Proyectos
@@ -16,33 +16,6 @@
 			</b-navbar-item>
 		</template>
 	</b-navbar>
-	<!-- <b-navbar fixed-top="true" spaced="true" type="is-info">
-		<template slot="brand">
-			<b-navbar-item
-				class="link-custom"
-				tag="router-link"
-				:to="{ path: '/' }"
-			>
-				<h3 class="navbar-title">
-					Jeremias <br />
-					Alvarez
-				</h3>
-			</b-navbar-item>
-		</template>
-
-		<template slot="end">
-			<b-navbar-item class="nav-link" href="#"> Inicio </b-navbar-item>
-			<b-navbar-item class="nav-link" href="#info">
-				¿Quien Soy?
-			</b-navbar-item>
-			<b-navbar-item class="nav-link" href="#projects">
-				Proyectos
-			</b-navbar-item>
-			<b-navbar-item class="nav-link" href="#contact">
-				Contacto
-			</b-navbar-item>
-		</template>
-	</b-navbar> -->
 </template>
 
 <style lang="scss" scoped>
