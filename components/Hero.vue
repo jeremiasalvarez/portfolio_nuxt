@@ -11,15 +11,18 @@
 							class="user-img m-auto"
 						></b-image>
 					</div>
+					<div class="divider is-vertical is-light is-flex-shrink-3">
+						<b-icon :type="'is-white'" icon="star" size="is-medium">
+						</b-icon>
+					</div>
 					<div
-						class="divider is-vertical is-light is-flex-shrink-3"
-					></div>
-					<div
-						class="is-flex is-justify-content-space-center is-align-items-center"
+						class="is-flex is-justify-content-center is-align-items-center is-flex-wrap-wrap is-align-self-center"
 					>
-						<p class="title is-flex-grow-5">Jeremias Alvarez</p>
+						<p class="title m-0">Jeremias Alvarez</p>
 
-						<p class="is-size-4">Software Developer</p>
+						<p class="is-size-5 mt-2 is-italic has-text-grey-light">
+							Software Developer
+						</p>
 					</div>
 				</div>
 			</div>
