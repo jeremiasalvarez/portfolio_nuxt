@@ -1,5 +1,8 @@
 <template>
-	<Hero />
+	<div>
+		<Hero />
+		<InfoTabs />
+	</div>
 </template>
 
 <script>

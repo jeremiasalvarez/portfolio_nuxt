@@ -1,3 +1,3 @@
 <template>
-	<h1>HOLA</h1>
+	<h3>Habi</h3>
 </template>

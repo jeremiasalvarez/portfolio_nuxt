@@ -128,6 +128,30 @@ $navbar-background-color: $info;
 
 $hero-body-padding-medium: 7rem 1.5rem 5rem 1.5rem;
 
+/*TABS*/
+.tabs {
+    a {
+        min-width: 100% !important;
+        padding-left: 15% !important;
+        display: flex !important;
+        justify-content: flex-start !important;
+        align-items: center !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .tabs {
+        a {
+            padding-left: unset !important;
+            justify-content: center !important;
+        }
+    }
+}
+
+
+$tabs-toggle-link-active-background-color: $info;
+$tabs-link-padding: 0.5em 0;		
+
 // Import Bulma and Buefy styles
 @import "~bulma";
 @import "~buefy/src/scss/buefy";
