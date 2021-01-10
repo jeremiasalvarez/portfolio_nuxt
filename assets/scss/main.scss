@@ -93,6 +93,26 @@ $darker-blue: #202b33;
     background-color: $darker-blue !important;
 }
 
+.w50 {
+    width: 50% !important;
+}
+
+.w80 {
+    width: 80% !important;
+}
+
+
+.w90 {
+    width: 90% !important;
+}
+
+.minw30 {
+    min-width: 30%;
+}
+
+.minw100 {
+    min-width: 100%;
+}
 
 /*BODY*/
 $body-background-color: rgb(228, 224, 224);
@@ -103,6 +123,10 @@ $navbar-item-hover-background-color: unset !important;
 $navbar-item-hover-color: #ddd !important;
 $navbar-item-color: #eee;
 $navbar-background-color: $info;
+
+/*HERO*/
+
+$hero-body-padding-medium: 7rem 1.5rem 5rem 1.5rem;
 
 // Import Bulma and Buefy styles
 @import "~bulma";
