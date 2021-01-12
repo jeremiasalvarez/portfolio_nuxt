@@ -28,7 +28,7 @@
 						windowWidth < 768 ? 'minw100' : 'mw33',
 						'tab-title'
 					]"
-					label="Aptitutes"
+					label="Habilidades"
 					icon="code-tags-check"
 				>
 					<SkillsTab />
