@@ -86,16 +86,6 @@
 </script>
 
 <style lang="scss" scoped>
-	.user-img {
-		width: 100%;
-		border-radius: 50%;
-	}
-	@media (min-width: 768px) {
-		.user-img {
-			width: 50%;
-		}
-	}
-
 	.container {
 		div {
 			width: 90%;

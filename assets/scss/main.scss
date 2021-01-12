@@ -114,6 +114,23 @@ $darker-blue: #202b33;
     min-width: 100%;
 }
 
+
+.user-img {
+    width: 100%;
+    border-radius: 50%;
+}
+@media (min-width: 768px) {
+    .user-img {
+        width: 50%;
+    }
+}
+
+.user-img-mini {
+
+    width: 100%; 
+}
+
+
 /*BODY*/
 $body-background-color: rgb(228, 224, 224);
 
@@ -137,6 +154,11 @@ $hero-body-padding-medium: 7rem 1.5rem 5rem 1.5rem;
         justify-content: flex-start !important;
         align-items: center !important;
     }
+    ul {
+        li {
+            background-color: #cfcbcb!important;
+        }
+    }
 }
 
 @media (min-width: 768px) {
@@ -145,12 +167,16 @@ $hero-body-padding-medium: 7rem 1.5rem 5rem 1.5rem;
             padding-left: unset !important;
             justify-content: center !important;
         }
+
+        
     }
 }
 
 
 $tabs-toggle-link-active-background-color: $info;
-$tabs-link-padding: 0.5em 0;		
+$tabs-toggle-link-hover-background-color: #bcbaba;	
+$tabs-link-padding: 0.5em 0;	
+$tabs-link-color: $info;		
 
 // Import Bulma and Buefy styles
 @import "~bulma";

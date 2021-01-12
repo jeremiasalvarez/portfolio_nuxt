@@ -28,7 +28,7 @@
 						windowWidth < 768 ? 'minw100' : 'mw33',
 						'tab-title'
 					]"
-					label="Habilidades y Tecnologias"
+					label="Aptitutes"
 					icon="code-tags-check"
 				>
 					<SkillsTab />
@@ -36,7 +36,8 @@
 				<b-tab-item
 					:headerClass="[
 						windowWidth < 768 ? 'minw100' : 'mw33',
-						'tab-title'
+						'tab-title',
+						'has-text-success'
 					]"
 					label="Experiencia"
 					icon="briefcase"
@@ -81,11 +82,5 @@
 	.mw33 {
 		min-width: 33.3% !important;
 		max-width: 33.3% !important;
-	}
-
-	li.minw100.tab-title {
-		a {
-			color: red;
-		}
 	}
 </style>
