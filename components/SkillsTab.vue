@@ -1,3 +1,9 @@
 <template>
-	<h3>Habi</h3>
+	<div class="">
+		<h3>{{ w }}</h3>
+		<h3>{{ w }}</h3>
+	</div>
 </template>
+
+<script>
+</script>

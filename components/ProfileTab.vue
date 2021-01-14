@@ -1,11 +1,37 @@
 <template>
 	<div class="container has-text-centered mt-5">
-		<div class="level m-auto" :class="[windowWidth >= 768 ? 'w80' : 'w90']">
-			<!-- Left side -->
-			<div class="level-left">
+		<!-- <div
+			class="level is-justify-content-center"
+			:class="[windowWidth >= 768 ? 'w80' : 'w90']"
+		> -->
+		<!-- Left side -->
+		<!-- <div class="level-left is-align-items-center w30">
 				<div
 					class="level-item img-container m-auto"
-					:class="[windowWidth >= 768 ? 'pr-5' : '']"
+					:class="[windowWidth >= 768 ? 'pr-5 mr-1' : '']"
+				> -->
+		<!-- <b-image
+						:src="require('../static/unnamed.png')"
+						alt="The Buefy Logo"
+						:rounded="rounded"
+						class="user-img-mini m-auto"
+					></b-image>
+				</div>
+			</div>
+
+			 Right side -->
+		<!-- <div class="level-right">
+				<h4 class="level-item"><strong>Ubicacion</strong></h4>
+			</div> -->
+		<!-- </div> -->
+		<div
+			class="columns is-vcentered m-auto is-gapless"
+			:class="[windowWidth >= 768 ? 'w80' : 'w90']"
+		>
+			<div class="column">
+				<div
+					class="level-item img-container m-auto w50"
+					:class="[windowWidth >= 768 ? 'pr-5 mr-1' : '']"
 				>
 					<b-image
 						:src="require('../static/unnamed.png')"
@@ -15,14 +41,40 @@
 					></b-image>
 				</div>
 			</div>
-
-			<!-- Right side -->
-			<div class="level-right">
-				<p class="level-item"><strong>All</strong></p>
-				<p class="level-item"><a>Published</a></p>
-				<p class="level-item"><a>Drafts</a></p>
-				<p class="level-item"><a>Deleted</a></p>
-				<p class="level-item"><a class="button is-success">New</a></p>
+			<div
+				class="column is-align-items-baseline"
+				:class="{ 'mt-3': windowWidth < 768 }"
+			>
+				<div
+					class="line"
+					:class="[windowWidth >= 768 ? 'w30' : 'w50 m-auto']"
+				>
+					<h4 class="mr-3 is-uppercase">
+						<strong>Ubicación:</strong>
+					</h4>
+					<b-image
+						:src="require('../assets/img/argentina.svg')"
+						alt="The Buefy Logo"
+						:rounded="rounded"
+						class="m-auto icon-border"
+						:class="[windowWidth >= 768 ? 'w50' : 'w15']"
+					></b-image>
+				</div>
+				<div
+					class="line mt-3"
+					:class="[windowWidth >= 768 ? 'w30' : 'w50 m-auto']"
+				>
+					<h4 class="mr-3 is-uppercase">
+						<strong>Otros Perfiles:</strong>
+					</h4>
+					<b-image
+						:src="require('../assets/img/argentina.svg')"
+						alt="The Buefy Logo"
+						:rounded="rounded"
+						class="m-auto icon-border"
+						:class="[windowWidth >= 768 ? 'w50' : 'w15']"
+					></b-image>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -38,7 +90,7 @@
 	}
 
 	.img-container {
-		width: 35%;
+		width: 75%;
 	}
 </style>
 

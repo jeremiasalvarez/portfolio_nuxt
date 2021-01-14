@@ -86,11 +86,26 @@ $darker-blue: #202b33;
 /*HELPERS*/
 
 .m-auto {
-	margin: auto;
+	margin: auto !important;
+}
+
+
+.line {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
 }
 
 .bg-darker-blue {
 	background-color: $darker-blue !important;
+}
+
+.w15 {
+	width: 15% !important;
+}
+
+.w30 {
+	width: 30% !important;
 }
 
 .w50 {
@@ -127,6 +142,11 @@ $darker-blue: #202b33;
 .user-img-mini {
 
     width: 100%; 
+}
+
+.icon-border {
+	border: 2px solid $info;
+	border-radius: 50%;
 }
 
 
