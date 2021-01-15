@@ -9,7 +9,6 @@ $primary-invert: findColorInvert($primary);
 $twitter: #4099ff;
 $twitter-invert: findColorInvert($twitter);
 
-$info: $info-dark;
 // Lists and maps
 $custom-colors: null !default;
 $custom-shades: null !default;
@@ -147,6 +146,10 @@ $darker-blue: #202b33;
 .icon-border {
 	border: 2px solid $info;
 	border-radius: 50%;
+}
+
+.border50 {
+	border-radius: 50% !important;
 }
 
 

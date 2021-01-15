@@ -43,7 +43,7 @@
 			</div>
 			<div
 				class="column is-align-items-baseline"
-				:class="{ 'mt-3': windowWidth < 768 }"
+				:class="{ 'mt-3': windowWidth <= 768 }"
 			>
 				<div
 					class="line"
@@ -57,7 +57,6 @@
 						alt="The Buefy Logo"
 						:rounded="rounded"
 						class="m-auto icon-border"
-						:class="[windowWidth >= 768 ? 'w50' : 'w15']"
 					></b-image>
 				</div>
 				<div
@@ -67,13 +66,28 @@
 					<h4 class="mr-3 is-uppercase">
 						<strong>Otros Perfiles:</strong>
 					</h4>
-					<b-image
-						:src="require('../assets/img/argentina.svg')"
-						alt="The Buefy Logo"
-						:rounded="rounded"
-						class="m-auto icon-border"
-						:class="[windowWidth >= 768 ? 'w50' : 'w15']"
-					></b-image>
+					<a class="icon-hover" href="linkedin.com">
+						<div class="icon-border mr-2">
+							<b-icon
+								pack="fab"
+								icon="linkedin-in"
+								size="is-medium"
+								type="is-info"
+							>
+							</b-icon>
+						</div>
+					</a>
+					<a class="icon-hover" href="github.com">
+						<div class="icon-border">
+							<b-icon
+								pack="fab"
+								icon="github"
+								size="is-medium"
+								type="is-info"
+							>
+							</b-icon>
+						</div>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -81,6 +95,8 @@
 </template>
 
 <style lang="scss" scoped>
+	$info: #202b33;
+
 	.level {
 		align-items: flex-start;
 	}
@@ -91,6 +107,17 @@
 
 	.img-container {
 		width: 75%;
+	}
+
+	.icon-hover:hover {
+		div {
+			background-color: $info;
+			span {
+				i {
+					color: white !important;
+				}
+			}
+		}
 	}
 </style>
 

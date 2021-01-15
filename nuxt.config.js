@@ -31,7 +31,10 @@ export default {
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/buefy
-    'nuxt-buefy',
+    ['nuxt-buefy', {
+      defaultIconPack: 'fa',
+      materialDesignIconsHRef: "https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+    }],
   ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
