@@ -14,35 +14,16 @@
 				size="is-medium"
 			>
 				<b-tab-item
+					v-for="(tab, index) in tabs"
+					:key="index"
 					:headerClass="[
 						windowWidth < 768 ? 'minw100' : 'mw33',
 						'tab-title'
 					]"
-					label="Perfil"
-					icon="clipboard-account"
+					:label="tab.title"
+					:icon="tab.icon"
 				>
-					<ProfileTab />
-				</b-tab-item>
-				<b-tab-item
-					:headerClass="[
-						windowWidth < 768 ? 'minw100' : 'mw33',
-						'tab-title'
-					]"
-					label="Habilidades"
-					icon="code-tags-check"
-				>
-					<SkillsTab />
-				</b-tab-item>
-				<b-tab-item
-					:headerClass="[
-						windowWidth < 768 ? 'minw100' : 'mw33',
-						'tab-title',
-						'has-text-success'
-					]"
-					label="Experiencia"
-					icon="briefcase"
-				>
-					<ExperienceTab />
+					<component :is="tab.component" />
 				</b-tab-item>
 			</b-tabs>
 		</div>
@@ -50,13 +31,38 @@
 </template>
 
 <script>
-	// TODO: ver si puedo exportar el tamaño de la ventana como variable global
+	import ExperienceTab from './ExperienceTab.vue';
+	import ProfileTab from './ProfileTab.vue';
+	import SkillsTab from './SkillsTab.vue';
+
 	export default {
+		components: {
+			ExperienceTab,
+			ProfileTab,
+			SkillsTab
+		},
 		data() {
 			return {
 				activeTab: 0,
 				windowWidth: window.innerWidth,
-				windowHeight: window.innerHeight
+				windowHeight: window.innerHeight,
+				tabs: [
+					{
+						icon: 'user',
+						title: 'Perfil',
+						component: ProfileTab
+					},
+					{
+						icon: 'code',
+						title: 'Aptitudes',
+						component: SkillsTab
+					},
+					{
+						icon: 'briefcase',
+						title: 'Experiencia',
+						component: ExperienceTab
+					}
+				]
 			};
 		},
 		mounted() {
