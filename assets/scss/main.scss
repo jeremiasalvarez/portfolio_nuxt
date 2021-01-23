@@ -13,6 +13,9 @@ $twitter-invert: findColorInvert($twitter);
 $custom-colors: null !default;
 $custom-shades: null !default;
 
+/*BODY*/
+$body-background-color: rgb(228, 224, 224);
+
 $info: #202b33;
 // Setup $colors to use as bulma classes (e.g. 'is-twitter')
 $colors: mergeColorMaps(
@@ -152,9 +155,11 @@ $darker-blue: #202b33;
 	border-radius: 50% !important;
 }
 
+.light {
+	color: $body-background-color;
+}
 
-/*BODY*/
-$body-background-color: rgb(228, 224, 224);
+
 
 /*NAVBAR*/
 $navbar-padding-horizontal: 10rem;

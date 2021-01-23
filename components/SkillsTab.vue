@@ -18,9 +18,8 @@
 						</b-icon>
 					</div>
 				</div>
-				<div class="columns is-centered">
-					<Skills :skillsArray="skillsBackEnd" />
-				</div>
+
+				<Skills :skillsArray="skillsBackEnd" />
 			</div>
 			<div class="column">
 				<div
@@ -39,9 +38,8 @@
 						</b-icon>
 					</div>
 				</div>
-				<div class="columns is-centered">
-					<Skills :skillsArray="skillsFrontEnd" />
-				</div>
+
+				<Skills :skillsArray="skillsFrontEnd" />
 			</div>
 		</div>
 	</div>
@@ -62,7 +60,7 @@
 						name: 'PHP'
 					},
 					{
-						name: 'MySQL'
+						name: 'BD: MySQL'
 					}
 				],
 				skillsFrontEnd: [
