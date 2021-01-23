@@ -10,7 +10,7 @@
 				></b-image>
 			</div>
 			<div class="column is-2">
-				<div class="columns is-vcentered is-gapless">
+				<div class="columns is-vcentered is-gapless mb-2">
 					<div class="column is-justify-content-flex-start is-narrow">
 						<h4><strong>Ubicación: </strong></h4>
 					</div>
@@ -26,12 +26,14 @@
 						></b-image>
 					</div>
 				</div>
-				<div class="columns is-variable is-1 is-vcentered">
+				<div class="columns is-variable is-3 is-vcentered mb-0">
 					<div class="column is-narrow">
-						<h4><strong>Más Perfiles:</strong></h4>
+						<h4><strong>Perfiles:</strong></h4>
 					</div>
 					<div class="column is-2">
-						<div class="columns is-variable is-1 is-vcentered">
+						<div
+							class="columns is-desktop is-variable is-1 is-vcentered"
+						>
 							<div class="column">
 								<b-tooltip label="Github" type="is-info">
 									<a class="icon-hover" href="github.com">
@@ -76,6 +78,63 @@
 										</div>
 									</a>
 								</b-tooltip>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="columns is-variable is-5 is-vcentered mb-0">
+					<div class="column is-narrow">
+						<h4><strong>Email:</strong></h4>
+					</div>
+					<div class="column is-2">
+						<div
+							class="columns is-desktop is-variable is-1 is-vcentered"
+						>
+							<div class="column">
+								<b-tooltip label="Github" type="is-info">
+									<a class="icon-hover" href="github.com">
+										<div class="icon-border">
+											<b-icon
+												pack="fas"
+												icon="envelope"
+												size="is-medium"
+												type="is-info"
+											>
+											</b-icon>
+										</div>
+									</a>
+								</b-tooltip>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="columns is-variable is-1 mb-0">
+					<div class="column is-narrow">
+						<h4><strong>Educación:</strong></h4>
+					</div>
+					<div class="column is-narrow">
+						<div class="columns is-desktop is-variable is-1">
+							<div class="column">
+								<p class="has-text-left">
+									<!-- <b-icon
+										pack="fas"
+										icon="graduation-cap"
+										size="is-medium"
+										type="is-info"
+									>
+									</b-icon> -->
+									Tecnico Universitario en Programación,
+									<br />
+									<i> Universidad Tecnologica Nacional </i>
+
+									<b-icon
+										pack="fas"
+										icon="graduation-cap"
+										size="is-medium"
+										type="is-info"
+									>
+									</b-icon>
+								</p>
 							</div>
 						</div>
 					</div>

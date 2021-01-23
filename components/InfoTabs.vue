@@ -49,12 +49,12 @@
 				tabs: [
 					{
 						icon: 'user',
-						title: 'Perfil',
+						title: 'Informacion',
 						component: ProfileTab
 					},
 					{
 						icon: 'code',
-						title: 'Aptitudes',
+						title: 'Aptitudes y Proyectos',
 						component: SkillsTab
 					},
 					{
