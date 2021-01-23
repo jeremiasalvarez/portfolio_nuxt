@@ -1,10 +1,6 @@
 <template>
 	<section id="info">
-		<div class="divider-container w50 m-auto pt-3">
-			<div class="divider is-info">
-				<h3 class="title is-4 is-size-5-mobile">Información</h3>
-			</div>
-		</div>
+		<TitleDivider text="Información" width="50" size="4" />
 		<div class="container pt-3">
 			<b-tabs
 				v-model="activeTab"

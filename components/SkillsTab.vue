@@ -6,7 +6,7 @@
 					class="columns is-vcentered is-desktop is-centered is-variable is-1"
 				>
 					<div class="column is-narrow">
-						<h2 class="title has-text-info">Backend</h2>
+						<h2 class="title is-4 has-text-info">Backend</h2>
 					</div>
 					<div class="column is-narrow">
 						<b-icon
@@ -26,7 +26,7 @@
 					class="columns is-vcentered is-desktop is-centered is-variable is-1"
 				>
 					<div class="column is-narrow">
-						<h2 class="title has-text-info">Frontend</h2>
+						<h2 class="title is-4 has-text-info">Frontend</h2>
 					</div>
 					<div class="column is-narrow">
 						<b-icon
