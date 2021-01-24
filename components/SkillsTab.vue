@@ -42,6 +42,7 @@
 				<Skills :skillsArray="skillsFrontEnd" />
 			</div>
 		</div>
+		<Projects />
 	</div>
 </template>
 
