@@ -1,6 +1,10 @@
 // Import Bulma's core
 @import '~bulma/sass/utilities/_all';
 
+html {
+	scroll-behavior: smooth;
+}
+
 // Set your colors
 $primary: #8c67ef;
 $primary-light: findLightColor($primary);
@@ -17,6 +21,7 @@ $custom-shades: null !default;
 $body-background-color: rgb(228, 224, 224);
 
 $info: #202b33;
+$info-light: $body-background-color;
 // Setup $colors to use as bulma classes (e.g. 'is-twitter')
 $colors: mergeColorMaps(
 	(
@@ -122,12 +127,21 @@ $darker-blue: #202b33;
 	width: 90% !important;
 }
 
+
+.w90 {
+	width: 100% !important;
+}
+
 .minw30 {
 	min-width: 30%;
 }
 
 .minw100 {
 	min-width: 100%;
+}
+
+.maxw30 {
+	max-width: 30%;
 }
 
 

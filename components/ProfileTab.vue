@@ -116,13 +116,6 @@
 						<div class="columns is-desktop is-variable is-1">
 							<div class="column">
 								<p class="has-text-left">
-									<!-- <b-icon
-										pack="fas"
-										icon="graduation-cap"
-										size="is-medium"
-										type="is-info"
-									>
-									</b-icon> -->
 									Tecnico Universitario en Programación,
 									<br />
 									<i> Universidad Tecnologica Nacional </i>
@@ -135,6 +128,24 @@
 									>
 									</b-icon>
 								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="columns is-variable is-vcentered is-8 mb-0">
+					<div class="column is-narrow">
+						<h4><strong>CV:</strong></h4>
+					</div>
+					<div class="column is-narrow">
+						<div class="columns is-desktop is-variable is-1">
+							<div class="column">
+								<b-button
+									icon-pack="fas"
+									type="is-info"
+									icon-right="arrow-circle-down"
+								>
+									Descargar mi CV
+								</b-button>
 							</div>
 						</div>
 					</div>

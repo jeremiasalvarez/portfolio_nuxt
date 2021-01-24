@@ -1,7 +1,8 @@
 <template>
 	<div>
 		<TitleDivider width="30" size="5" text="Proyectos" />
-		<ProyectCarousel />
+
+		<ProjectCarousel />
 	</div>
 </template>
 
