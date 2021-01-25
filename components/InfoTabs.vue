@@ -2,6 +2,7 @@
 	<section id="info">
 		<TitleDivider text="Información" width="50" size="4" />
 		<div class="container pt-3">
+			<h3>{{ currentTab }}, {{ activeTab }}</h3>
 			<b-tabs
 				v-model="activeTab"
 				type="is-toggle"
@@ -18,6 +19,7 @@
 					]"
 					:label="tab.title"
 					:icon="tab.icon"
+					:value="index"
 				>
 					<component :is="tab.component" />
 				</b-tab-item>
@@ -32,6 +34,11 @@
 	import SkillsTab from './SkillsTab.vue';
 
 	export default {
+		computed: {
+			currentTab() {
+				return this.$store.state.currentTab;
+			}
+		},
 		components: {
 			ExperienceTab,
 			ProfileTab,
@@ -39,7 +46,7 @@
 		},
 		data() {
 			return {
-				activeTab: 0,
+				activeTab: this.$store.state.currentTab,
 				windowWidth: window.innerWidth,
 				windowHeight: window.innerHeight,
 				tabs: [

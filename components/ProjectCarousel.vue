@@ -2,13 +2,16 @@
 	<div>
 		<b-carousel-list v-model="test" :data="items" :items-to-show="3">
 			<template #item="project">
-				<div class="card mr-3 ml-3">
+				<div class="card mr-3 ml-3 minh100">
 					<div class="card-header">
 						<p class="card-header-title">{{ project.title }}</p>
 					</div>
 					<div class="card-image">
-						<figure class="image is-2by2">
-							<img src="../assets/img/todoapp.png" />
+						<figure class="image is-3by3">
+							<img
+								class="imgcard"
+								:src="require(`~/assets/img/${project.image}`)"
+							/>
 						</figure>
 					</div>
 					<div class="card-content has-text-light">
@@ -16,7 +19,7 @@
 							<div class="columns is centered is-vcentered">
 								<div class="column">
 									<b-button
-										label="Más Información"
+										label="Descripción"
 										class="m-auto has-text-info"
 										type="is-info is-light"
 										rounded
@@ -55,8 +58,7 @@
 				items: [
 					{
 						title: 'Todo App - Control de Tareas',
-						image:
-							'https://buefy.org/static/img/placeholder-1280x960.png',
+						image: 'todoapp.png',
 						stack: [
 							'Vue JS',
 							'Bootstrap',
@@ -69,13 +71,42 @@
 						links: [
 							{
 								description: 'Repositorio de Github',
+								link:
+									'https://github.com/jeremiasalvarez/vuejs-todo',
+								icon: 'github',
+								pack: 'fab'
+							},
+							{
+								description: 'Demo del Proyecto',
+								link: 'https://task-manager-vuejs.herokuapp.com/',
+								icon: 'play-circle',
+								pack: 'fas'
+							}
+						]
+					},
+					{
+						title: 'Consultorio Dental',
+						image: 'sonrisa.png',
+						stack: [
+							'Vanilla JS',
+							'Bootstrap',
+							'Handlebars',
+							'Node JS',
+							'Express JS',
+							'MySQL'
+						],
+						description:
+							'Aplicación para gestionar turnos de un consultorio dental ficticio. La dentista (usuario administrador) puede recibir solicitudes de turnos de los pacientes. Las solicitudes pueden ser aceptadas (se programa el turno) o rechazadas. Los turnos pueden ser reprogramados o cancelados y los pacientes son notificados via e-mail. La dentista tambien puede acceder a la historia clinica de todos los pacientes, e imprimirla.\n Los pacientes pueden registrarse en el sistema, solicitar turnos, pagar por dichos turnos (el sistema incluye pagos reales mediante la API de Mercadopago) y observar su historia clinica.\n\nEste proyecto fue una asignación/tarea universitaria.',
+						links: [
+							{
+								description: 'Repositorio de Github',
 								link: 'asd.com',
 								icon: 'github',
 								pack: 'fab'
 							},
 							{
 								description: 'Demo del Proyecto',
-								link: 'asd.com',
+								link: 'http://turnos-sonrisafeliz.herokuapp.com/',
 								icon: 'play-circle',
 								pack: 'fas'
 							}
@@ -83,8 +114,7 @@
 					},
 					{
 						title: 'Todo App - Control de Tareas',
-						image:
-							'https://buefy.org/static/img/placeholder-1280x960.png',
+						image: 'sonrisa.png',
 						stack: [
 							'Vue JS',
 							'Bootstrap',
@@ -97,22 +127,7 @@
 					},
 					{
 						title: 'Todo App - Control de Tareas',
-						image:
-							'https://buefy.org/static/img/placeholder-1280x960.png',
-						stack: [
-							'Vue JS',
-							'Bootstrap',
-							'Node JS',
-							'Express JS',
-							'MySQL'
-						],
-						description:
-							'Una sencilla aplicación que permite almacenar tareas en una lista, marcalas como completadas o no completas, editar su información y tambien eliminarlas de la lista'
-					},
-					{
-						title: 'Todo App - Control de Tareas',
-						image:
-							'https://buefy.org/static/img/placeholder-1280x960.png',
+						image: 'sonrisa.png',
 						stack: [
 							'Vue JS',
 							'Bootstrap',

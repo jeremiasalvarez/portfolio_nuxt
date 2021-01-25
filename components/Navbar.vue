@@ -8,7 +8,11 @@
 			<b-navbar-item class="nav-link" href="#info">
 				Información
 			</b-navbar-item>
-			<b-navbar-item class="nav-link" href="#projects">
+			<b-navbar-item
+				@click="setCurrentTab"
+				class="nav-link"
+				href="#projects"
+			>
 				Proyectos
 			</b-navbar-item>
 			<b-navbar-item class="nav-link" href="#contact">
@@ -17,6 +21,22 @@
 		</template>
 	</b-navbar>
 </template>
+
+<script>
+	export default {
+		computed: {
+			currentTab() {
+				return this.$store.state.currentTab;
+			}
+		},
+		methods: {
+			setCurrentTab(e) {
+				console.log('click');
+				this.$store.commit('setCurrentTab', 1);
+			}
+		}
+	};
+</script>
 
 <style lang="scss" scoped>
 	@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap');
