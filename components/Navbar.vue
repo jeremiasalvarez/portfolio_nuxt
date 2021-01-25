@@ -5,17 +5,24 @@
 		</template>
 		<template slot="end">
 			<b-navbar-item class="nav-link" href="#"> Inicio </b-navbar-item>
-			<b-navbar-item class="nav-link" href="#info">
+			<b-navbar-item
+				@click="setCurrentTab('info', 0)"
+				class="nav-link"
+				href="#info"
+			>
 				Información
 			</b-navbar-item>
 			<b-navbar-item
-				@click="setCurrentTab"
+				@click="setCurrentTab('projects', 1)"
 				class="nav-link"
-				href="#projects"
 			>
 				Proyectos
 			</b-navbar-item>
-			<b-navbar-item class="nav-link" href="#contact">
+			<b-navbar-item
+				@click="setCurrentTab('info', 0)"
+				class="nav-link"
+				href="#contact"
+			>
 				Contacto
 			</b-navbar-item>
 		</template>
@@ -29,10 +36,25 @@
 				return this.$store.state.currentTab;
 			}
 		},
+		watch: {
+			currentTab() {
+				this.activeTab = this.$store.state.currentTab;
+			}
+		},
+		data() {
+			return {
+				activeTab: this.currentTab
+			};
+		},
 		methods: {
-			setCurrentTab(e) {
-				console.log('click');
-				this.$store.commit('setCurrentTab', 1);
+			setCurrentTab(element, tabId) {
+				this.$store.commit('setCurrentTab', tabId);
+				setTimeout(
+					function () {
+						document.getElementById(element).scrollIntoView();
+					},
+					tabId === this.activeTab ? 0 : 300
+				);
 			}
 		}
 	};

@@ -151,6 +151,10 @@ $darker-blue: #202b33;
 	min-height: 100%;
 }
 
+.minh30vh {
+	min-height: 30vh;
+}
+
 .imgcard {
 	min-height: 12rem;
 	max-height: 13rem;
@@ -235,3 +239,7 @@ $tabs-link-color: $info;
 @import '~buefy/src/scss/buefy';
 
 @import '~@creativebulma/bulma-divider';
+
+
+@import '~bulma-timeline';
+

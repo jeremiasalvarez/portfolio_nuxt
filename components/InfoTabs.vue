@@ -2,13 +2,13 @@
 	<section id="info">
 		<TitleDivider text="Información" width="50" size="4" />
 		<div class="container pt-3">
-			<h3>{{ currentTab }}, {{ activeTab }}</h3>
 			<b-tabs
 				v-model="activeTab"
 				type="is-toggle"
 				expanded
 				multiline
 				size="is-medium"
+				@input="setCurrentTab"
 			>
 				<b-tab-item
 					v-for="(tab, index) in tabs"
@@ -37,6 +37,11 @@
 		computed: {
 			currentTab() {
 				return this.$store.state.currentTab;
+			}
+		},
+		watch: {
+			currentTab() {
+				this.activeTab = this.$store.state.currentTab;
 			}
 		},
 		components: {
@@ -82,6 +87,9 @@
 			onResize() {
 				this.windowWidth = window.innerWidth;
 				this.windowHeight = window.innerHeight;
+			},
+			setCurrentTab(index) {
+				this.$store.commit('setCurrentTab', index);
 			}
 		}
 	};
