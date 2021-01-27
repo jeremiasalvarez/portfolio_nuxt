@@ -100,4 +100,9 @@
 		min-width: 33.3% !important;
 		max-width: 33.3% !important;
 	}
+
+	#info {
+		padding-top: 2rem;
+		padding-bottom: 4rem;
+	}
 </style>

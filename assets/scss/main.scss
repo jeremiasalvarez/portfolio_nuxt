@@ -180,6 +180,15 @@ $darker-blue: #202b33;
 	border-radius: 50%;
 }
 
+.icon-hover:hover {
+	div {
+		background-color: $info;
+		span {
+			color: white !important;
+		}
+	}
+}
+
 .border50 {
 	border-radius: 50% !important;
 }
@@ -233,6 +242,12 @@ $tabs-toggle-link-active-background-color: $info;
 $tabs-toggle-link-hover-background-color: #bcbaba;	
 $tabs-link-padding: 0.5em 0;	
 $tabs-link-color: $info;		
+
+/*FOOTER*/
+
+$footer-padding: 2rem 2rem 2rem;
+$footer-background-color: $info;
+
 
 // Import Bulma and Buefy styles
 @import '~bulma';

@@ -1,5 +1,5 @@
 export const state = () => ({
-    currentTab: 1
+    currentTab: 0
 })
 
 export const mutations = {
