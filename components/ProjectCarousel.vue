@@ -6,7 +6,12 @@
 					<div class="card-header">
 						<p class="card-header-title">{{ project.title }}</p>
 					</div>
-					<div class="card-image">
+					<div
+						:style="`border: 2px solid ${
+							project.borderColor || '#202b33'
+						}`"
+						class="card-image"
+					>
 						<figure class="image is-3by3">
 							<img
 								class="imgcard"
@@ -113,30 +118,21 @@
 						]
 					},
 					{
-						title: 'Todo App - Control de Tareas',
-						image: 'sonrisa.png',
-						stack: [
-							'Vue JS',
-							'Bootstrap',
-							'Node JS',
-							'Express JS',
-							'MySQL'
-						],
+						title: 'Portfolio Personal',
+						image: 'portfolio.png',
+						stack: ['Vue JS', 'Nuxt JS', 'Buefy / Bulma'],
 						description:
-							'Una sencilla aplicación que permite almacenar tareas en una lista, marcalas como completadas o no completas, editar su información y tambien eliminarlas de la lista'
-					},
-					{
-						title: 'Todo App - Control de Tareas',
-						image: 'sonrisa.png',
-						stack: [
-							'Vue JS',
-							'Bootstrap',
-							'Node JS',
-							'Express JS',
-							'MySQL'
-						],
-						description:
-							'Una sencilla aplicación que permite almacenar tareas en una lista, marcalas como completadas o no completas, editar su información y tambien eliminarlas de la lista'
+							'El sitio que estas viendo actualmente. Hecho a modo de presentación',
+						borderColor: '#ccc',
+						links: [
+							{
+								description: 'Repositorio de Github',
+								link:
+									'https://github.com/jeremiasalvarez/portfolio',
+								icon: 'github',
+								pack: 'fab'
+							}
+						]
 					}
 				]
 			};
