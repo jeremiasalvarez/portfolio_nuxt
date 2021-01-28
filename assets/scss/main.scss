@@ -107,6 +107,10 @@ $darker-blue: #202b33;
 	background-color: $darker-blue !important;
 }
 
+.w10 {
+	width: 10% !important;
+}
+
 .w15 {
 	width: 15% !important;
 }
@@ -171,8 +175,14 @@ $darker-blue: #202b33;
 }
 
 .user-img-mini {
+    width: 35%; 
+}
 
-    width: 100%; 
+
+@media (min-width: 768px) {
+    .user-img-mini {
+        width: 80%;
+    }
 }
 
 .icon-border {

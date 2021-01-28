@@ -5,7 +5,6 @@
 				<ProfileIconsLine :isFooter="true" />
 			</div>
 			<p class="has-text-light has-text-weight-bold">
-				<span class="is-italic"> Jeremias Alvarez </span>-
 				{{ `${new Date().getUTCFullYear()}` }}
 			</p>
 		</div>

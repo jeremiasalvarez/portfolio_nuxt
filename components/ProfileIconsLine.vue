@@ -1,43 +1,21 @@
 <template>
-	<div class="column is-2">
-		<div class="columns is-desktop is-variable is-1 is-vcentered">
-			<div class="column">
-				<b-tooltip label="Github" type="is-info">
+	<div class="column" :class="isMobile ? 'is-6' : 'is-2'">
+		<div
+			class="columns is-desktop is-variable is-1 is-vcentered"
+			:class="isMobile ? 'is-justify-content-flex-start is-mobile' : ''"
+		>
+			<div
+				v-for="(icon, index) in icons"
+				:key="index"
+				class="column"
+				:class="isMobile ? 'is-narrow' : ''"
+			>
+				<b-tooltip :label="icon.tooltipLabel" type="is-info">
 					<a class="icon-hover" href="github.com">
 						<div class="icon-border">
 							<b-icon
-								pack="fab"
-								icon="github"
-								size="is-medium"
-								:type="isFooter ? 'is-light' : 'is-info'"
-							>
-							</b-icon>
-						</div>
-					</a>
-				</b-tooltip>
-			</div>
-			<div class="column">
-				<b-tooltip label="LinkedIn" type="is-info">
-					<a class="icon-hover" href="github.com">
-						<div class="icon-border">
-							<b-icon
-								pack="fab"
-								icon="linkedin-in"
-								size="is-medium"
-								:type="isFooter ? 'is-light' : 'is-info'"
-							>
-							</b-icon>
-						</div>
-					</a>
-				</b-tooltip>
-			</div>
-			<div class="column">
-				<b-tooltip label="Gitlab" type="is-info">
-					<a class="icon-hover" href="github.com">
-						<div class="icon-border">
-							<b-icon
-								pack="fab"
-								icon="gitlab"
+								:pack="icon.pack"
+								:icon="icon.name"
 								size="is-medium"
 								:type="isFooter ? 'is-light' : 'is-info'"
 							>
@@ -52,6 +30,27 @@
 
 <script>
 	export default {
-		props: ['isFooter']
+		props: ['isFooter', 'isMobile'],
+		data() {
+			return {
+				icons: [
+					{
+						pack: 'fab',
+						name: 'github',
+						tooltipLabel: 'Perfil de Github'
+					},
+					{
+						pack: 'fab',
+						name: 'linkedin-in',
+						tooltipLabel: 'Perfil de Linkedin'
+					},
+					{
+						pack: 'fab',
+						name: 'gitlab',
+						tooltipLabel: 'Perfil de Gitlab'
+					}
+				]
+			};
+		}
 	};
 </script>
