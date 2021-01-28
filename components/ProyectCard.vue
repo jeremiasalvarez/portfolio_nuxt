@@ -1,10 +1,20 @@
 <template>
 	<div class="modal-card" style="width: auto">
 		<header class="modal-card-head has-background-info-light">
-			<p class="modal-card-title has-text-info">
-				{{ projectModel.title }}
-			</p>
-			<button type="button" class="delete" @click="$emit('close')" />
+			<div class="columns is-mobile is-centered">
+				<div class="column is-11">
+					<p class="modal-card-title has-text-info">
+						{{ projectModel.title }}
+					</p>
+				</div>
+				<div class="column is-1">
+					<button
+						type="button"
+						class="delete"
+						@click="$emit('close')"
+					/>
+				</div>
+			</div>
 		</header>
 		<TitleDivider width="100" size="4" />
 		<section class="modal-card-body has-background-info-light p-0">

@@ -3,7 +3,7 @@
 		<div class="columns is-desktop is-centered is-variable is-1">
 			<div class="column">
 				<div
-					class="columns is-vcentered is-desktop is-centered is-variable is-1"
+					class="columns is-mobile is-vcentered is-desktop is-centered is-variable is-1"
 				>
 					<div class="column is-narrow">
 						<h2 class="title is-4 has-text-info">Backend</h2>
@@ -19,11 +19,14 @@
 					</div>
 				</div>
 
-				<Skills :skillsArray="skillsBackEnd" />
+				<Skills
+					:isMobile="windowWidth <= 768"
+					:skillsArray="skillsBackEnd"
+				/>
 			</div>
 			<div class="column">
 				<div
-					class="columns is-vcentered is-desktop is-centered is-variable is-1"
+					class="columns is-mobile is-vcentered is-desktop is-centered is-variable is-1"
 				>
 					<div class="column is-narrow">
 						<h2 class="title is-4 has-text-info">Frontend</h2>
@@ -39,7 +42,10 @@
 					</div>
 				</div>
 
-				<Skills :skillsArray="skillsFrontEnd" />
+				<Skills
+					:isMobile="windowWidth <= 768"
+					:skillsArray="skillsFrontEnd"
+				/>
 			</div>
 		</div>
 		<Projects />
@@ -77,8 +83,26 @@
 					{
 						name: 'Bulma (Buefy)'
 					}
-				]
+				],
+				windowWidth: window.innerWidth,
+				windowHeight: window.innerHeight
 			};
+		},
+		mounted() {
+			this.$nextTick(() => {
+				window.addEventListener('resize', this.onResize);
+			});
+		},
+
+		beforeDestroy() {
+			window.removeEventListener('resize', this.onResize);
+		},
+
+		methods: {
+			onResize() {
+				this.windowWidth = window.innerWidth;
+				this.windowHeight = window.innerHeight;
+			}
 		}
 	};
 </script>

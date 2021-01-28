@@ -45,8 +45,12 @@
 					<ProfileIconsLine :isMobile="windowWidth < 768" />
 				</div>
 				<div
-					:class="windowWidth < 768 ? 'is-centered is-mobile' : ''"
-					class="columns is-variable is-5 is-vcentered mb-0"
+					:class="
+						windowWidth < 768
+							? 'is-centered is-mobile is-5'
+							: 'is-5'
+					"
+					class="columns is-variable is-vcentered mb-0 w90"
 				>
 					<div class="column is-narrow">
 						<h4><strong>Email:</strong></h4>
@@ -79,11 +83,23 @@
 						</div>
 					</div>
 				</div>
-				<div class="columns is-variable is-1 mb-0">
-					<div class="column is-narrow">
-						<h4><strong>Educación:</strong></h4>
+				<!-- class="columns is-variable is-5 is-vcentered mb-0 is-centered is-mobile" -->
+				<div
+					class="columns is-mobile is-variable is-1 mb-0"
+					:class="windowWidth >= 768 ? '' : 'is-centered'"
+				>
+					<div
+						class="column"
+						:class="windowWidth >= 768 ? 'is-narrow' : 'is-4'"
+					>
+						<h4 :class="windowWidth >= 768 ? '' : 'has-text-right'">
+							<strong>Educación:</strong>
+						</h4>
 					</div>
-					<div class="column is-narrow">
+					<div
+						class="column"
+						:class="windowWidth >= 768 ? 'is-11' : 'is-7 pl-2'"
+					>
 						<div class="columns is-desktop is-variable is-1">
 							<div class="column">
 								<p class="has-text-left">
@@ -103,11 +119,17 @@
 						</div>
 					</div>
 				</div>
-				<div class="columns is-variable is-vcentered is-8 mb-0">
+				<div
+					class="columns is-mobile is-variable is-vcentered mb-0 w90"
+					:class="windowWidth >= 768 ? 'is-8' : 'is-centered is-5'"
+				>
 					<div class="column is-narrow">
 						<h4><strong>CV:</strong></h4>
 					</div>
-					<div class="column is-narrow">
+					<div
+						class="column is-narrow"
+						:class="windowWidth >= 768 ? '' : 'is-6'"
+					>
 						<div class="columns is-desktop is-variable is-1">
 							<div class="column">
 								<b-button

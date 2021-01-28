@@ -1,10 +1,13 @@
 <template>
-	<div class="columns is-centered is-1 is-variable">
-		<div class="column is-one-quarter is-justify-content-flex-start">
+	<div class="columns is-mobile is-centered is-1 is-variable">
+		<div
+			class="column is-justify-content-flex-start"
+			:class="isMobile ? 'is-10' : 'is-one-quarter'"
+		>
 			<div
 				v-for="({ name }, index) in skillsArray"
 				:key="index"
-				class="columns is-centered is-justify-content-flex-start mb-0"
+				class="columns is-mobile is-centered is-justify-content-flex-start mb-0"
 			>
 				<div class="column is-narrow">
 					<b-icon
@@ -50,7 +53,7 @@
 
 <script>
 	export default {
-		props: ['skillsArray']
+		props: ['skillsArray', 'isMobile']
 	};
 </script>
 

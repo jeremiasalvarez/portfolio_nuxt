@@ -258,7 +258,9 @@ $tabs-link-color: $info;
 $footer-padding: 2rem 2rem 2rem;
 $footer-background-color: $info;
 
-
+/*CAROUSEL*/
+$carousel-arrow-color: $info-light;
+$carousel-arrow-background: $info;
 // Import Bulma and Buefy styles
 @import '~bulma';
 @import '~buefy/src/scss/buefy';

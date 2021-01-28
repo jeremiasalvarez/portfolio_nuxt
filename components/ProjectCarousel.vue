@@ -1,13 +1,21 @@
 <template>
 	<div id="projects">
-		<b-carousel-list v-model="test" :data="items" :items-to-show="3">
+		<b-carousel-list
+			v-model="test"
+			:data="items"
+			:items-to-show="isMobile ? 1 : 3"
+			:arrow-hover="false"
+			icon-pack="fas"
+			icon-size="is-medium"
+		>
 			<template #item="project">
 				<div class="card mr-3 ml-3 minh100">
 					<div class="card-header">
 						<p class="card-header-title">{{ project.title }}</p>
 					</div>
 					<div
-						:style="`border: 2px solid ${
+						@click="openModal(project)"
+						:style="`cursor: pointer; border: 2px solid ${
 							project.borderColor || '#202b33'
 						}`"
 						class="card-image"
@@ -42,7 +50,7 @@
 			can-cancel
 			has-modal-card
 			v-model="isCardModalActive"
-			:width="400"
+			:width="isMobile ? 320 : 400"
 			scroll="clip"
 		>
 			<ProyectCard
@@ -55,6 +63,7 @@
 
 <script>
 	export default {
+		props: ['isMobile'],
 		data() {
 			return {
 				isCardModalActive: false,

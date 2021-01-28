@@ -1,5 +1,5 @@
 <template>
-	<section class="hero is-info is-medium">
+	<section class="hero is-info is-medium mw100">
 		<div class="hero-body">
 			<div class="container has-text-centered">
 				<div class="is-flex is-justify-content-space-around m-auto">
@@ -34,7 +34,7 @@
 				>
 					<b-button
 						:class="[
-							windowWidth > 768 ? 'mt-6 minw30' : 'mt-2 minw100'
+							windowWidth >= 768 ? 'mt-6 minw30' : 'mt-2 minw100'
 						]"
 						class="m-auto"
 						type="is-info"
@@ -44,7 +44,7 @@
 					>
 					<b-button
 						:class="[
-							windowWidth > 768 ? 'mt-6 minw30' : 'mt-2 minw100'
+							windowWidth >= 768 ? 'mt-6 minw30' : 'mt-2 minw100'
 						]"
 						class="m-auto"
 						type="is-info"
