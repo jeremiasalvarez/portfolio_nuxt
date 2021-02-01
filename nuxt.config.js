@@ -35,6 +35,33 @@ export default {
       defaultIconPack: 'fa',
       materialDesignIconsHRef: "https://use.fontawesome.com/releases/v5.4.1/css/all.css"
     }],
+    [
+      'nuxt-i18n',
+      {
+        locales: [
+          {
+            code: 'en',
+            name: 'ENG'
+          },
+          {
+            code: 'es',
+            name: 'ESP'
+          }
+        ],
+        defaultLocale: 'es',
+        vueI18n: {
+          fallbackLocale: 'es',
+          messages: {
+            en: {
+              welcome: 'Welcome'
+            },
+            es: {
+              welcome: 'Bienvenido'
+            }
+          }
+        }
+      }
+    ]
   ],
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)

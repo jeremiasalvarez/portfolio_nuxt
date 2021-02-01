@@ -211,11 +211,14 @@ $card-background-color: $info;
 $card-header-color: $body-background-color;
 
 /*NAVBAR*/
-$navbar-padding-horizontal: 10rem;
+$navbar-padding-horizontal: 0rem;
 $navbar-item-hover-background-color: unset !important;
 $navbar-item-hover-color: #ddd !important;
 $navbar-item-color: #eee;
 $navbar-background-color: $info;
+$navbar-dropdown-background-color: $info;
+$navbar-dropdown-item-hover-background-color: #eee !important;
+$navbar-dropdown-item-hover-color: $info !important;
 
 /*HERO*/
 

@@ -12,20 +12,20 @@
 			<div class="column is-2">
 				<div
 					class="columns is-mobile is-vcentered is-gapless mb-2"
-					:class="[windowWidth >= 768 ? '' : 'is-centered']"
+					:class="[windowWidth > 768 ? '' : 'is-centered']"
 				>
 					<div class="column is-justify-content-flex-start is-narrow">
 						<h4><strong>Ubicación: </strong></h4>
 					</div>
 					<div
 						class="column"
-						:class="[windowWidth >= 768 ? 'is-10' : 'is-5']"
+						:class="[windowWidth > 768 ? 'is-10' : 'is-5']"
 					>
 						<p>Chaco, Argentina</p>
 					</div>
 					<div
 						class="column"
-						:class="[windowWidth >= 768 ? 'is-2' : 'is-1']"
+						:class="[windowWidth > 768 ? 'is-2' : 'is-1']"
 					>
 						<b-image
 							:src="require('../assets/img/argentina.svg')"
@@ -86,13 +86,13 @@
 				<!-- class="columns is-variable is-5 is-vcentered mb-0 is-centered is-mobile" -->
 				<div
 					class="columns is-mobile is-variable is-1 mb-0"
-					:class="windowWidth >= 768 ? '' : 'is-centered'"
+					:class="windowWidth > 768 ? '' : 'is-centered'"
 				>
 					<div
 						class="column"
-						:class="windowWidth >= 768 ? 'is-narrow' : 'is-4'"
+						:class="windowWidth > 768 ? 'is-narrow' : 'is-4'"
 					>
-						<h4 :class="windowWidth >= 768 ? '' : 'has-text-right'">
+						<h4 :class="windowWidth > 768 ? '' : 'has-text-right'">
 							<strong>Educación:</strong>
 						</h4>
 					</div>
@@ -121,14 +121,14 @@
 				</div>
 				<div
 					class="columns is-mobile is-variable is-vcentered mb-0 w90"
-					:class="windowWidth >= 768 ? 'is-8' : 'is-centered is-5'"
+					:class="windowWidth > 768 ? 'is-8' : 'is-centered is-5'"
 				>
 					<div class="column is-narrow">
 						<h4><strong>CV:</strong></h4>
 					</div>
 					<div
 						class="column is-narrow"
-						:class="windowWidth >= 768 ? '' : 'is-6'"
+						:class="windowWidth > 768 ? '' : 'is-6'"
 					>
 						<div class="columns is-desktop is-variable is-1">
 							<div class="column">

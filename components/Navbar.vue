@@ -1,30 +1,64 @@
 <template>
-	<b-navbar fixed-top="true" spaced="true" type="is-info">
-		<template slot="brand">
+	<b-navbar centered fixed-top spaced type="is-info">
+		<!-- <template slot="brand">
 			<h4 class="navbar-title">Jeremias Alvarez</h4>
+		</template> -->
+		<template slot="start">
+			<b-navbar-item class="nav-link" href="#"> Inicio </b-navbar-item>
+			<b-navbar-item class="nav-link" href="#">
+				{{ $t('welcome') }}
+			</b-navbar-item>
+
+			<b-navbar-dropdown class="nav-link" label="Información">
+				<b-navbar-item @click="setCurrentTab('info', 0)">
+					Perfiles y Contacto
+				</b-navbar-item>
+				<b-navbar-item @click="setCurrentTab('experience', 2)">
+					Experiencia
+				</b-navbar-item>
+				<b-navbar-item @click="setCurrentTab('projects', 1)">
+					Proyectos
+				</b-navbar-item>
+			</b-navbar-dropdown>
 		</template>
 		<template slot="end">
-			<b-navbar-item class="nav-link" href="#"> Inicio </b-navbar-item>
-			<b-navbar-item
-				@click="setCurrentTab('info', 0)"
-				class="nav-link"
-				href="#info"
-			>
-				Información
+			<b-navbar-item>
+				<!-- <nuxt-link
+					v-for="locale in availableLocales"
+					:key="locale.code"
+					:to="switchLocalePath(locale.code)"
+					>{{ locale.name }}</nuxt-link
+				> -->
+				<b-select
+					v-model="$i18n.locale"
+					placeholder="Country"
+					icon="globe"
+					icon-pack="fas"
+				>
+					<option
+						v-for="lang in $i18n.locales"
+						:key="lang.code"
+						:value="lang.code"
+					>
+						{{ lang.name }}
+					</option>
+				</b-select>
 			</b-navbar-item>
-			<b-navbar-item
-				@click="setCurrentTab('projects', 1)"
-				class="nav-link"
-			>
-				Proyectos
-			</b-navbar-item>
-			<b-navbar-item
-				@click="setCurrentTab('info', 0)"
-				class="nav-link"
-				href="#contact"
-			>
-				Contacto
-			</b-navbar-item>
+
+			<!-- <p>ENG</p>
+			<b-navbar-item>
+				<b-switch
+					@input="switchLocalePath(langSwitchValue)"
+					passive-type="is-primary"
+					v-model="langSwitchValue"
+					true-value="es"
+					false-value="en"
+					:value="true"
+					type="is-primary"
+				>
+					ESP
+				</b-switch>
+			</b-navbar-item> -->
 		</template>
 	</b-navbar>
 </template>
@@ -34,6 +68,11 @@
 		computed: {
 			currentTab() {
 				return this.$store.state.currentTab;
+			},
+			availableLocales() {
+				return this.$i18n.locales.filter(
+					(i) => i.code !== this.$i18n.locale
+				);
 			}
 		},
 		watch: {
@@ -43,7 +82,8 @@
 		},
 		data() {
 			return {
-				activeTab: this.currentTab
+				activeTab: this.currentTab,
+				langSwitchValue: 'es'
 			};
 		},
 		methods: {

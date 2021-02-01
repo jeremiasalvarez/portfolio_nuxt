@@ -6,7 +6,7 @@
 			text="Proyectos"
 		/>
 
-		<ProjectCarousel :isMobile="windowWidth < 768" />
+		<ProjectCarousel :width="windowWidth" :isMobile="windowWidth < 768" />
 	</div>
 </template>
 

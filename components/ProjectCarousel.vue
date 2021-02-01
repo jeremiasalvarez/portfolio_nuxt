@@ -3,7 +3,7 @@
 		<b-carousel-list
 			v-model="test"
 			:data="items"
-			:items-to-show="isMobile ? 1 : 3"
+			:items-to-show="calcItemsToShow()"
 			:arrow-hover="false"
 			icon-pack="fas"
 			icon-size="is-medium"
@@ -63,7 +63,7 @@
 
 <script>
 	export default {
-		props: ['isMobile'],
+		props: ['isMobile', 'width'],
 		data() {
 			return {
 				isCardModalActive: false,
@@ -157,6 +157,15 @@
 			closeModal() {
 				this.isCardModalActive = false;
 				this.selectedProject = {};
+			},
+			calcItemsToShow() {
+				if (this.width < 960 && this.width >= 768) {
+					return 2;
+				} else if (this.width < 768) {
+					return 1;
+				}
+
+				return 3;
 			}
 		}
 	};

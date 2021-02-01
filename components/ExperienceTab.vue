@@ -1,5 +1,5 @@
 <template>
-	<div class="timeline is-centered minh30vh p-6">
+	<div id="experience" class="timeline is-centered minh30vh p-6">
 		<header class="timeline-header">
 			<span class="tag is-small is-info"></span>
 		</header>
