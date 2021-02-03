@@ -4,31 +4,27 @@
 			<h4 class="navbar-title">Jeremias Alvarez</h4>
 		</template> -->
 		<template slot="start">
-			<b-navbar-item class="nav-link" href="#"> Inicio </b-navbar-item>
 			<b-navbar-item class="nav-link" href="#">
-				{{ $t('welcome') }}
+				{{ $t('navbar.start') }}
 			</b-navbar-item>
 
-			<b-navbar-dropdown class="nav-link" label="Información">
+			<b-navbar-dropdown class="nav-link" :label="$t('navbar.info')">
 				<b-navbar-item @click="setCurrentTab('info', 0)">
-					Perfiles y Contacto
+					{{ $t('navbar.dropdown.profile') }}
 				</b-navbar-item>
 				<b-navbar-item @click="setCurrentTab('experience', 2)">
-					Experiencia
+					{{ $t('navbar.dropdown.exp') }}
 				</b-navbar-item>
 				<b-navbar-item @click="setCurrentTab('projects', 1)">
-					Proyectos
+					{{ $t('navbar.dropdown.projects') }}
+				</b-navbar-item>
+				<b-navbar-item @click="setCurrentTab('skills', 1)">
+					{{ $t('navbar.dropdown.skills') }}
 				</b-navbar-item>
 			</b-navbar-dropdown>
 		</template>
 		<template slot="end">
 			<b-navbar-item>
-				<!-- <nuxt-link
-					v-for="locale in availableLocales"
-					:key="locale.code"
-					:to="switchLocalePath(locale.code)"
-					>{{ locale.name }}</nuxt-link
-				> -->
 				<b-select
 					v-model="$i18n.locale"
 					placeholder="Country"
@@ -44,21 +40,6 @@
 					</option>
 				</b-select>
 			</b-navbar-item>
-
-			<!-- <p>ENG</p>
-			<b-navbar-item>
-				<b-switch
-					@input="switchLocalePath(langSwitchValue)"
-					passive-type="is-primary"
-					v-model="langSwitchValue"
-					true-value="es"
-					false-value="en"
-					:value="true"
-					type="is-primary"
-				>
-					ESP
-				</b-switch>
-			</b-navbar-item> -->
 		</template>
 	</b-navbar>
 </template>

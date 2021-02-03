@@ -20,16 +20,22 @@
 		<section class="modal-card-body has-background-info-light p-0">
 			<div class="card-content has-text-info">
 				<div class="content">
-					<p class="title is-6 has-text-info">Sobre el Proyecto</p>
+					<p class="title is-6 has-text-info">
+						{{ $t('main.tabs.projectsTab.labels.cardTitle') }}
+					</p>
 
 					<div class="columns is-variable is-3">
 						<div class="column">
 							<p
 								class="is-italic has-text-weight-semibold has-text-left"
 							>
-								Descripción:
+								{{
+									$t(
+										'main.tabs.projectsTab.labels.description'
+									)
+								}}:
 								<span
-									class="project-desc has-text-weight-normal"
+									class="ml-2 project-desc has-text-weight-normal"
 								>
 									{{ projectModel.description }}
 								</span>
@@ -41,7 +47,7 @@
 							<p
 								class="is-italic has-text-weight-semibold has-text-left"
 							>
-								Stack:
+								{{ $t('main.tabs.projectsTab.labels.stack') }}:
 							</p>
 						</div>
 						<div class="column is-9">

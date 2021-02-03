@@ -1,5 +1,5 @@
 <template>
-	<div class="container has-text-centered mt-5">
+	<div id="skills" class="container has-text-centered mt-5">
 		<div
 			class="columns is-desktop is-centered is-variable is-1"
 			:class="windowWidth >= 768 ? 'is-mobile' : ''"

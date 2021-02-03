@@ -1,6 +1,6 @@
 <template>
 	<section id="info">
-		<TitleDivider text="Información" width="50" size="4" />
+		<TitleDivider :text="$t('main.title')" width="50" size="4" />
 		<div class="container pt-3">
 			<b-tabs
 				v-model="activeTab"
@@ -37,6 +37,27 @@
 		computed: {
 			currentTab() {
 				return this.$store.state.currentTab;
+			},
+			tabs() {
+				return [
+					{
+						icon: 'user',
+						title: this.$t('main.tabs.profileTab.title'),
+						component: ProfileTab
+					},
+					{
+						icon: 'code',
+						title: this.$t('main.tabs.projectsTab.title'),
+
+						component: SkillsTab
+					},
+					{
+						icon: 'briefcase',
+						title: this.$t('main.tabs.expTab.title'),
+
+						component: ExperienceTab
+					}
+				];
 			}
 		},
 		watch: {
@@ -53,24 +74,7 @@
 			return {
 				activeTab: this.$store.state.currentTab,
 				windowWidth: window.innerWidth,
-				windowHeight: window.innerHeight,
-				tabs: [
-					{
-						icon: 'user',
-						title: 'Informacion',
-						component: ProfileTab
-					},
-					{
-						icon: 'code',
-						title: 'Aptitudes y Proyectos',
-						component: SkillsTab
-					},
-					{
-						icon: 'briefcase',
-						title: 'Experiencia',
-						component: ExperienceTab
-					}
-				]
+				windowHeight: window.innerHeight
 			};
 		},
 		mounted() {

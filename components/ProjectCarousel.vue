@@ -32,7 +32,11 @@
 							<div class="columns is centered is-vcentered">
 								<div class="column">
 									<b-button
-										label="Descripción"
+										:label="
+											$t(
+												'main.tabs.projectsTab.buttons.more'
+											)
+										"
 										class="m-auto has-text-info"
 										type="is-info is-light"
 										rounded
@@ -64,14 +68,13 @@
 <script>
 	export default {
 		props: ['isMobile', 'width'],
-		data() {
-			return {
-				isCardModalActive: false,
-				selectedProject: {},
-				test: 0,
-				items: [
+		computed: {
+			items() {
+				return [
 					{
-						title: 'Todo App - Control de Tareas',
+						title: this.$t(
+							'main.tabs.projectsTab.projects.todoApp.title'
+						),
 						image: 'todoapp.png',
 						stack: [
 							'Vue JS',
@@ -80,18 +83,23 @@
 							'Express JS',
 							'MySQL'
 						],
-						description:
-							'Una sencilla aplicación que permite almacenar tareas en una lista, marcalas como completadas o no completas, editar su información y tambien eliminarlas de la lista',
+						description: this.$t(
+							'main.tabs.projectsTab.projects.todoApp.description'
+						),
 						links: [
 							{
-								description: 'Repositorio de Github',
+								description: this.$t(
+									'main.tabs.projectsTab.buttons.githubRepo'
+								),
 								link:
 									'https://github.com/jeremiasalvarez/vuejs-todo',
 								icon: 'github',
 								pack: 'fab'
 							},
 							{
-								description: 'Demo del Proyecto',
+								description: this.$t(
+									'main.tabs.projectsTab.buttons.demo'
+								),
 								link: 'https://task-manager-vuejs.herokuapp.com/',
 								icon: 'play-circle',
 								pack: 'fas'
@@ -99,7 +107,9 @@
 						]
 					},
 					{
-						title: 'Consultorio Dental',
+						title: this.$t(
+							'main.tabs.projectsTab.projects.dentistApp.title'
+						),
 						image: 'sonrisa.png',
 						stack: [
 							'Vanilla JS',
@@ -109,17 +119,22 @@
 							'Express JS',
 							'MySQL'
 						],
-						description:
-							'Aplicación para gestionar turnos de un consultorio dental ficticio. La dentista (usuario administrador) puede recibir solicitudes de turnos de los pacientes. Las solicitudes pueden ser aceptadas (se programa el turno) o rechazadas. Los turnos pueden ser reprogramados o cancelados y los pacientes son notificados via e-mail. La dentista tambien puede acceder a la historia clinica de todos los pacientes, e imprimirla.\n Los pacientes pueden registrarse en el sistema, solicitar turnos, pagar por dichos turnos (el sistema incluye pagos reales mediante la API de Mercadopago) y observar su historia clinica.\n\nEste proyecto fue una asignación/tarea universitaria.',
+						description: this.$t(
+							'main.tabs.projectsTab.projects.dentistApp.description'
+						),
 						links: [
 							{
-								description: 'Repositorio de Github',
+								description: this.$t(
+									'main.tabs.projectsTab.buttons.githubRepo'
+								),
 								link: 'asd.com',
 								icon: 'github',
 								pack: 'fab'
 							},
 							{
-								description: 'Demo del Proyecto',
+								description: this.$t(
+									'main.tabs.projectsTab.buttons.demo'
+								),
 								link: 'http://turnos-sonrisafeliz.herokuapp.com/',
 								icon: 'play-circle',
 								pack: 'fas'
@@ -127,15 +142,20 @@
 						]
 					},
 					{
-						title: 'Portfolio Personal',
+						title: this.$t(
+							'main.tabs.projectsTab.projects.portfolio.title'
+						),
 						image: 'portfolio.png',
 						stack: ['Vue JS', 'Nuxt JS', 'Buefy / Bulma'],
-						description:
-							'El sitio que estas viendo actualmente. Hecho a modo de presentación',
+						description: this.$t(
+							'main.tabs.projectsTab.projects.portfolio.description'
+						),
 						borderColor: '#ccc',
 						links: [
 							{
-								description: 'Repositorio de Github',
+								description: this.$t(
+									'main.tabs.projectsTab.buttons.githubRepo'
+								),
 								link:
 									'https://github.com/jeremiasalvarez/portfolio',
 								icon: 'github',
@@ -143,7 +163,14 @@
 							}
 						]
 					}
-				]
+				];
+			}
+		},
+		data() {
+			return {
+				isCardModalActive: false,
+				selectedProject: {},
+				test: 0
 			};
 		},
 		methods: {

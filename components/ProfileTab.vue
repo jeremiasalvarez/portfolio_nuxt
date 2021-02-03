@@ -15,7 +15,11 @@
 					:class="[windowWidth > 768 ? '' : 'is-centered']"
 				>
 					<div class="column is-justify-content-flex-start is-narrow">
-						<h4><strong>Ubicación: </strong></h4>
+						<h4>
+							<strong
+								>{{ $t('main.tabs.profileTab.location') }}:
+							</strong>
+						</h4>
 					</div>
 					<div
 						class="column"
@@ -40,7 +44,13 @@
 					:class="[windowWidth < 768 ? 'is-mobile is-centered' : '']"
 				>
 					<div class="column is-narrow">
-						<h4><strong>Perfiles:</strong></h4>
+						<h4>
+							<strong
+								>{{
+									$t('main.tabs.profileTab.profiles')
+								}}:</strong
+							>
+						</h4>
 					</div>
 					<ProfileIconsLine :isMobile="windowWidth < 768" />
 				</div>
@@ -93,7 +103,11 @@
 						:class="windowWidth > 768 ? 'is-narrow' : 'is-4'"
 					>
 						<h4 :class="windowWidth > 768 ? '' : 'has-text-right'">
-							<strong>Educación:</strong>
+							<strong
+								>{{
+									$t('main.tabs.profileTab.education.title')
+								}}:</strong
+							>
 						</h4>
 					</div>
 					<div
@@ -103,7 +117,11 @@
 						<div class="columns is-desktop is-variable is-1">
 							<div class="column">
 								<p class="has-text-left">
-									Tecnico Universitario en Programación,
+									{{
+										$t(
+											'main.tabs.profileTab.education.desc'
+										)
+									}},
 									<br />
 									<i> Universidad Tecnologica Nacional </i>
 
@@ -137,7 +155,7 @@
 									type="is-info"
 									icon-right="arrow-circle-down"
 								>
-									Descargar mi CV
+									{{ $t('main.tabs.profileTab.cv.button') }}
 								</b-button>
 							</div>
 						</div>
