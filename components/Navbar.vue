@@ -1,9 +1,33 @@
 <template>
-	<b-navbar centered fixed-top spaced type="is-info">
-		<!-- <template slot="brand">
-			<h4 class="navbar-title">Jeremias Alvarez</h4>
-		</template> -->
-		<template slot="start">
+	<b-navbar fixed-top spaced type="is-info">
+		<template slot="brand">
+			<b-navbar-item>
+				<!-- el label "english" no cambia el idioma sin el metodo -->
+				<div
+					@click="switchLang"
+					class="is-flex is-align-items-center mr-5"
+				>
+					<div class="is-flex is-align-items-center mr-5 pr-2">
+						<img src="../assets/img/reino-unido.svg" class="mr-2" />
+						<p class="mr-1">English</p>
+					</div>
+					<b-switch
+						id="langSwitcher"
+						v-model="langSwitchValue"
+						true-value="es"
+						false-value="en"
+						type="is-primary"
+						passive-type="is-primary"
+					>
+						<div class="is-flex is-align-items-center">
+							<p class="mr-2">Español</p>
+							<img src="../assets/img/argentina.svg" />
+						</div>
+					</b-switch>
+				</div>
+			</b-navbar-item>
+		</template>
+		<template slot="end">
 			<b-navbar-item class="nav-link" href="#">
 				{{ $t('navbar.start') }}
 			</b-navbar-item>
@@ -23,24 +47,6 @@
 				</b-navbar-item>
 			</b-navbar-dropdown>
 		</template>
-		<template slot="end">
-			<b-navbar-item>
-				<b-select
-					v-model="$i18n.locale"
-					placeholder="Country"
-					icon="globe"
-					icon-pack="fas"
-				>
-					<option
-						v-for="lang in $i18n.locales"
-						:key="lang.code"
-						:value="lang.code"
-					>
-						{{ lang.name }}
-					</option>
-				</b-select>
-			</b-navbar-item>
-		</template>
 	</b-navbar>
 </template>
 
@@ -55,10 +61,16 @@
 					(i) => i.code !== this.$i18n.locale
 				);
 			}
+			// langSwitchValue() {
+			// 	return 'es';
+			// }
 		},
 		watch: {
 			currentTab() {
 				this.activeTab = this.$store.state.currentTab;
+			},
+			langSwitchValue() {
+				this.$i18n.locale = this.langSwitchValue;
 			}
 		},
 		data() {
@@ -76,6 +88,9 @@
 					},
 					tabId === this.activeTab ? 0 : 300
 				);
+			},
+			switchLang() {
+				document.querySelector('#langSwitcher').click();
 			}
 		}
 	};

@@ -31,26 +31,47 @@
 <script>
 	export default {
 		props: ['isFooter', 'isMobile'],
-		data() {
-			return {
-				icons: [
+		computed: {
+			icons() {
+				return [
 					{
 						pack: 'fab',
 						name: 'github',
-						tooltipLabel: 'Perfil de Github'
+						tooltipLabel: this.$t('other.tooltips.github')
 					},
 					{
 						pack: 'fab',
 						name: 'linkedin-in',
-						tooltipLabel: 'Perfil de Linkedin'
+						tooltipLabel: this.$t('other.tooltips.linkedin')
 					},
 					{
 						pack: 'fab',
 						name: 'gitlab',
-						tooltipLabel: 'Perfil de Gitlab'
+						tooltipLabel: this.$t('other.tooltips.gitlab')
 					}
-				]
-			};
+				];
+			}
 		}
+		// data() {
+		// 	return {
+		// 		icons: [
+		// 			{
+		// 				pack: 'fab',
+		// 				name: 'github',
+		// 				tooltipLabel: 'Perfil de Github'
+		// 			},
+		// 			{
+		// 				pack: 'fab',
+		// 				name: 'linkedin-in',
+		// 				tooltipLabel: 'Perfil de Linkedin'
+		// 			},
+		// 			{
+		// 				pack: 'fab',
+		// 				name: 'gitlab',
+		// 				tooltipLabel: 'Perfil de Gitlab'
+		// 			}
+		// 		]
+		// 	};
+		// }
 	};
 </script>

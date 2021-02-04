@@ -29,7 +29,7 @@
 						</p>
 					</div>
 				</div>
-				<div
+				<!-- <div
 					class="hero-buttons is-flex is-justify-content-space-evenly m-auto w50 is-flex-wrap-wrap"
 				>
 					<b-button
@@ -52,7 +52,7 @@
 						outlined
 						>Contacto</b-button
 					>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</section>

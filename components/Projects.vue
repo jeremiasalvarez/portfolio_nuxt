@@ -3,7 +3,7 @@
 		<TitleDivider
 			:width="windowWidth < 768 ? 50 : 30"
 			size="5"
-			text="Proyectos"
+			:text="$t('main.tabs.projectsTab.subtitle')"
 		/>
 
 		<ProjectCarousel :width="windowWidth" :isMobile="windowWidth < 768" />

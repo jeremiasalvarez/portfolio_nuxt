@@ -72,7 +72,7 @@ export default {
                     profiles: 'Profiles',
                     education: {
                       title: 'Education',
-                      desc: 'Programming Technician'
+                      desc: 'Technical Degree in Programming'
                     },
                     cv: {
                       button: 'Download my CV'
@@ -80,6 +80,7 @@ export default {
                   },
                   projectsTab: {
                     title: 'Skills & Projects',
+                    subtitle: 'projects',
                     labels: {
                       stack: 'Tech Stack',
                       description: 'Description',
@@ -106,8 +107,22 @@ export default {
                     }
                   },
                   expTab: {
-                    title: 'Experience'
+                    title: 'Experience',
+                    present: 'present',
+                    months: {
+                      nov: 'november'
+                    },
+                    labels: {
+                      backendDev: 'Backend developer'
+                    }
                   }
+                }
+              },
+              other: {
+                tooltips: {
+                  github: 'Find me on Github',
+                  gitlab: 'Find me on Gitlab',
+                  linkedin: 'LinkedIn Profile'
                 }
               }
             },
@@ -139,6 +154,7 @@ export default {
                   },
                   projectsTab: {
                     title: 'Aptitudes y Proyectos',
+                    subtitle: 'proyectos',
                     labels: {
                       stack: 'Stack',
                       description: 'Descripción',
@@ -166,8 +182,22 @@ export default {
                     }
                   },
                   expTab: {
-                    title: 'Experiencia'
+                    title: 'Experiencia',
+                    present: 'presente',
+                    months: {
+                      nov: 'noviembre'
+                    },
+                    labels: {
+                      backendDev: 'Desarrollador backend'
+                    }
                   }
+                }
+              },
+              other: {
+                tooltips: {
+                  github: 'Perfil de Github',
+                  gitlab: 'Perfil de Gitlab',
+                  linkedin: 'Perfil de LinkedIn'
                 }
               }
             }

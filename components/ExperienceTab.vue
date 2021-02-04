@@ -69,16 +69,25 @@
 
 <script>
 	export default {
-		data() {
-			return {
-				experienceArray: [
+		computed: {
+			experienceArray() {
+				return [
 					{
-						timespan: 'Noviembre 2020 - Presente',
+						timespan: `
+										${this.$t('main.tabs.expTab.months.nov')} 2020 - ${this.$t(
+							'main.tabs.expTab.present'
+						)}`,
 						companyName: 'Devactory Software House',
 						companyLogo: 'devactory.png',
-						description: 'Desarrollador backend (NodeJS, SailsJS)'
+						description: `${this.$t(
+							'main.tabs.expTab.labels.backendDev'
+						)} (NodeJS, SailsJS, MySQL)`
 					}
-				],
+				];
+			}
+		},
+		data() {
+			return {
 				windowWidth: window.innerWidth,
 				windowHeight: window.innerHeight
 			};
