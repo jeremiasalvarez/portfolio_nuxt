@@ -14,6 +14,7 @@
 					<b-switch
 						id="langSwitcher"
 						v-model="langSwitchValue"
+						style="pointer-events: none"
 						true-value="es"
 						false-value="en"
 						type="is-primary"
