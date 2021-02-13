@@ -23,7 +23,9 @@
 						<figure class="image is-3by3">
 							<img
 								class="imgcard"
-								:src="require(`~/assets/img/${project.image}`)"
+								:src="
+									require(`~/assets/img/${project.imgRoute}`)
+								"
 							/>
 						</figure>
 					</div>
@@ -68,109 +70,34 @@
 <script>
 	export default {
 		props: ['isMobile', 'width'],
+		async created() {
+			const { data: projects } = await this.$axios.get(`/projects`);
+
+			this.projects = projects;
+
+			this.items = this.projects.filter(
+				(project) => project.lang === this.currentLang
+			);
+		},
 		computed: {
-			items() {
-				return [
-					{
-						title: this.$t(
-							'main.tabs.projectsTab.projects.todoApp.title'
-						),
-						image: 'todoapp.png',
-						stack: [
-							'Vue JS',
-							'Bootstrap',
-							'Node JS',
-							'Express JS',
-							'MySQL'
-						],
-						description: this.$t(
-							'main.tabs.projectsTab.projects.todoApp.description'
-						),
-						links: [
-							{
-								description: this.$t(
-									'main.tabs.projectsTab.buttons.githubRepo'
-								),
-								link:
-									'https://github.com/jeremiasalvarez/vuejs-todo',
-								icon: 'github',
-								pack: 'fab'
-							},
-							{
-								description: this.$t(
-									'main.tabs.projectsTab.buttons.demo'
-								),
-								link: 'https://task-manager-vuejs.herokuapp.com/',
-								icon: 'play-circle',
-								pack: 'fas'
-							}
-						]
-					},
-					{
-						title: this.$t(
-							'main.tabs.projectsTab.projects.dentistApp.title'
-						),
-						image: 'sonrisa.png',
-						stack: [
-							'Vanilla JS',
-							'Bootstrap',
-							'Handlebars',
-							'Node JS',
-							'Express JS',
-							'MySQL'
-						],
-						description: this.$t(
-							'main.tabs.projectsTab.projects.dentistApp.description'
-						),
-						links: [
-							{
-								description: this.$t(
-									'main.tabs.projectsTab.buttons.githubRepo'
-								),
-								link: 'asd.com',
-								icon: 'github',
-								pack: 'fab'
-							},
-							{
-								description: this.$t(
-									'main.tabs.projectsTab.buttons.demo'
-								),
-								link: 'http://turnos-sonrisafeliz.herokuapp.com/',
-								icon: 'play-circle',
-								pack: 'fas'
-							}
-						]
-					},
-					{
-						title: this.$t(
-							'main.tabs.projectsTab.projects.portfolio.title'
-						),
-						image: 'portfolio.png',
-						stack: ['Vue JS', 'Nuxt JS', 'Buefy / Bulma'],
-						description: this.$t(
-							'main.tabs.projectsTab.projects.portfolio.description'
-						),
-						borderColor: '#ccc',
-						links: [
-							{
-								description: this.$t(
-									'main.tabs.projectsTab.buttons.githubRepo'
-								),
-								link:
-									'https://github.com/jeremiasalvarez/portfolio',
-								icon: 'github',
-								pack: 'fab'
-							}
-						]
-					}
-				];
+			currentLang() {
+				return this.$i18n.locale;
+			}
+		},
+		watch: {
+			currentLang() {
+				this.items = this.projects.filter(
+					(project) => project.lang === this.currentLang
+				);
 			}
 		},
 		data() {
 			return {
 				isCardModalActive: false,
 				selectedProject: {},
-				test: 0
+				test: 0,
+				items: [],
+				projects: []
 			};
 		},
 		methods: {

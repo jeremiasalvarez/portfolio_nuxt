@@ -17,7 +17,7 @@ export default {
   css: ["@/assets/scss/main.scss"],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
+  plugins: [{ src: '~/plugins/i18n.js' },],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -35,9 +35,11 @@ export default {
       defaultIconPack: 'fa',
       materialDesignIconsHRef: "https://use.fontawesome.com/releases/v5.4.1/css/all.css"
     }],
+    ['@nuxtjs/axios'],
     [
       'nuxt-i18n',
       {
+        // vueI18nLoader: true,
         locales: [
           {
             code: 'en',
@@ -206,6 +208,9 @@ export default {
       }
     ]
   ],
+  axios: {
+    baseURL: 'http://localhost:5000/api/v1'
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},

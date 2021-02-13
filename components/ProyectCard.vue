@@ -78,14 +78,14 @@
 							<a
 								v-for="(link, index) in projectModel.links"
 								:key="index"
-								:href="link.link"
+								:href="link.href"
 							>
 								<b-button
 									expanded
 									type="is-info mb-3"
 									outlined
-									:icon-pack="link.pack"
-									:icon-right="link.icon"
+									:icon-pack="link.iconPack"
+									:icon-right="link.iconName"
 									>{{ link.description }}</b-button
 								>
 							</a>

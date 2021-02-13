@@ -62,9 +62,6 @@
 					(i) => i.code !== this.$i18n.locale
 				);
 			}
-			// langSwitchValue() {
-			// 	return 'es';
-			// }
 		},
 		watch: {
 			currentTab() {
@@ -72,6 +69,7 @@
 			},
 			langSwitchValue() {
 				this.$i18n.locale = this.langSwitchValue;
+				// this.$i18n.mergeLocaleMessage(this.$i18n.locale, { hola: 'hello' }); para cambiar dinamicamente con async
 			}
 		},
 		data() {
@@ -117,3 +115,4 @@
 		font-size: 1.1rem;
 	}
 </style>
+
