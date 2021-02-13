@@ -1,7 +1,7 @@
 <template>
 	<div class="modal-card" style="width: auto">
 		<header class="modal-card-head has-background-info-light">
-			<div class="columns is-mobile is-centered">
+			<div class="columns is-mobile is-centersed is-vcentered minw100">
 				<div class="column is-11">
 					<p class="modal-card-title has-text-info">
 						{{ projectModel.title }}
