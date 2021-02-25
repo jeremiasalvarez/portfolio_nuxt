@@ -11,6 +11,14 @@
 			<b-skeleton width="100%" :animated="true"></b-skeleton>
 		</div>
 	</div>
+	<div
+		class="is-flex is-justify-content-center is-align-items-center"
+		v-else-if="loadingError"
+	>
+		<b-icon pack="fas" icon="times" size="is-medium" type="is-danger">
+		</b-icon>
+		<h3>Proyectos no disponibles. Error en la carga</h3>
+	</div>
 	<div v-else id="projects">
 		<b-carousel-list
 			v-model="test"
