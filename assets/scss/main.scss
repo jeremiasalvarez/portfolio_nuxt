@@ -266,6 +266,10 @@ $footer-background-color: $info;
 /*CAROUSEL*/
 $carousel-arrow-color: $info-light;
 $carousel-arrow-background: $info;
+
+
+$skeleton-background: linear-gradient(90deg, #bcbaba 25%, rgba(#bcbaba, 0.5) 50%, #bcbaba 75%);
+
 // Import Bulma and Buefy styles
 @import '~bulma';
 @import '~buefy/src/scss/buefy';

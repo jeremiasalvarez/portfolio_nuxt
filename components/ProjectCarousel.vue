@@ -1,5 +1,17 @@
 <template>
-	<div id="projects">
+	<div class="columns is-centered" v-if="loadingProjects">
+		<div class="column" v-for="i in calcItemsToShow()" :key="i">
+			<b-skeleton width="100%" :animated="true"></b-skeleton>
+			<b-skeleton width="100%" :animated="true"></b-skeleton>
+			<b-skeleton width="100%" :animated="true"></b-skeleton>
+			<b-skeleton width="100%" :animated="true"></b-skeleton>
+			<b-skeleton width="100%" :animated="true"></b-skeleton>
+			<b-skeleton width="100%" :animated="true"></b-skeleton>
+			<b-skeleton width="100%" :animated="true"></b-skeleton>
+			<b-skeleton width="100%" :animated="true"></b-skeleton>
+		</div>
+	</div>
+	<div v-else id="projects">
 		<b-carousel-list
 			v-model="test"
 			:data="items"
@@ -24,7 +36,9 @@
 							<img
 								class="imgcard"
 								:src="
-									require(`~/assets/img/${project.imgRoute}`)
+									require(`~/assets/img/${
+										project.imgRoute || 'portfolio.png'
+									}`)
 								"
 							/>
 						</figure>
@@ -71,13 +85,21 @@
 	export default {
 		props: ['isMobile', 'width'],
 		async created() {
-			const { data: projects } = await this.$axios.get(`/projects`);
+			this.loadingProjects = true;
 
-			this.projects = projects;
+			try {
+				const { data: projects } = await this.$axios.get(`/projects`);
 
-			this.items = this.projects.filter(
-				(project) => project.lang === this.currentLang
-			);
+				this.projects = projects;
+
+				this.items = this.projects.filter(
+					(project) => project.lang === this.currentLang
+				);
+			} catch (error) {
+				this.loadingError = true;
+			}
+
+			this.loadingProjects = false;
 		},
 		computed: {
 			currentLang() {
@@ -97,7 +119,9 @@
 				selectedProject: {},
 				test: 0,
 				items: [],
-				projects: []
+				projects: [],
+				loadingProjects: false,
+				loadingError: false
 			};
 		},
 		methods: {

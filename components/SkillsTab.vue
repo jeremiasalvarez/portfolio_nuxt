@@ -64,7 +64,7 @@
 						name: 'Node JS (Express JS, Sails JS)'
 					},
 					{
-						name: 'ASP.NET Core (MVC - Web API)'
+						name: '.NET (C#)'
 					},
 					{
 						name: 'PHP'
