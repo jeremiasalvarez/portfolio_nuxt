@@ -150,13 +150,17 @@
 					>
 						<div class="columns is-desktop is-variable is-1">
 							<div class="column">
-								<b-button
-									icon-pack="fas"
-									type="is-info"
-									icon-right="arrow-circle-down"
-								>
-									{{ $t('main.tabs.profileTab.cv.button') }}
-								</b-button>
+								<a href="/Alvarez_Jeremias_CV.pdf" download>
+									<b-button
+										icon-pack="fas"
+										type="is-info"
+										icon-right="arrow-circle-down"
+									>
+										{{
+											$t('main.tabs.profileTab.cv.button')
+										}}
+									</b-button>
+								</a>
 							</div>
 						</div>
 					</div>

@@ -10,7 +10,7 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/code.ico' }],
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
@@ -209,7 +209,7 @@ export default {
     ]
   ],
   axios: {
-    baseURL: 'http://localhost:5000/api/v1'
+    baseURL: 'https://api-portfolio-personal.herokuapp.com/api/v1'
   },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
