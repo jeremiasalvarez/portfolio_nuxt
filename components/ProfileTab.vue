@@ -3,7 +3,7 @@
 		<div class="columns is-vcentered is-desktop is-centered is-gapless">
 			<div class="column is-one-fifth">
 				<b-image
-					:src="require('../static/unnamed.png')"
+					:src="require('../static/avatar_toon.jpg')"
 					alt="The Buefy Logo"
 					:rounded="true"
 					class="user-img-mini m-auto"
@@ -76,8 +76,16 @@
 								class="column is-narrow"
 								:class="windowWidth < 768 ? 'pl-0' : ''"
 							>
-								<b-tooltip label="Github" type="is-info">
-									<a class="icon-hover" href="github.com">
+								<b-tooltip
+									label="jerealvarez34@gmail.com"
+									type="is-info"
+									:triggers="['click', 'hover']"
+									:auto-close="['outside', 'escape']"
+								>
+									<a
+										class="icon-hover"
+										href="mailto:jerealvarez34@gmail.com"
+									>
 										<div class="icon-border">
 											<b-icon
 												pack="fas"
@@ -170,7 +178,11 @@
 	</div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
+	.user-img-mini {
+		border: 2px solid #202b33;
+		border-radius: 50%;
+	}
 </style>
 
 <script>

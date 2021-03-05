@@ -11,7 +11,7 @@
 				:class="isMobile ? 'is-narrow' : ''"
 			>
 				<b-tooltip :label="icon.tooltipLabel" type="is-info">
-					<a class="icon-hover" href="github.com">
+					<a class="icon-hover" :href="icon.href">
 						<div class="icon-border">
 							<b-icon
 								:pack="icon.pack"
@@ -37,17 +37,14 @@
 					{
 						pack: 'fab',
 						name: 'github',
-						tooltipLabel: this.$t('other.tooltips.github')
+						tooltipLabel: this.$t('other.tooltips.github'),
+						href: 'https://github.com/jeremiasalvarez'
 					},
 					{
 						pack: 'fab',
 						name: 'linkedin-in',
-						tooltipLabel: this.$t('other.tooltips.linkedin')
-					},
-					{
-						pack: 'fab',
-						name: 'gitlab',
-						tooltipLabel: this.$t('other.tooltips.gitlab')
+						tooltipLabel: this.$t('other.tooltips.linkedin'),
+						href: 'https://www.linkedin.com/in/jeremiasalvarezdev/'
 					}
 				];
 			}

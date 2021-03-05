@@ -64,13 +64,13 @@
 						name: 'Node JS (Express JS, Sails JS)'
 					},
 					{
-						name: '.NET (C#)'
+						name: 'C#.NET'
 					},
 					{
 						name: 'PHP'
 					},
 					{
-						name: 'BD: MySQL'
+						name: 'MySQL, MongoDB'
 					}
 				],
 				skillsFrontEnd: [

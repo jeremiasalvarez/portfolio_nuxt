@@ -5,9 +5,9 @@
 				<div class="is-flex is-justify-content-space-around m-auto">
 					<div class="img-container m-auto">
 						<b-image
-							:src="require('../static/unnamed.png')"
+							:src="require('../static/avatar.png')"
 							alt="The Buefy Logo"
-							:rounded="rounded"
+							rounded
 							class="user-img m-auto"
 						></b-image>
 					</div>

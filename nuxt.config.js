@@ -143,7 +143,7 @@ export default {
                 title: 'Información',
                 tabs: {
                   profileTab: {
-                    title: 'Información',
+                    title: 'Perfil',
                     location: 'Ubicación',
                     profiles: 'Perfiles',
                     education: {
@@ -211,6 +211,8 @@ export default {
   axios: {
     baseURL: 'https://api-portfolio-personal.herokuapp.com/api/v1'
   },
+
+  target: 'static',
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
