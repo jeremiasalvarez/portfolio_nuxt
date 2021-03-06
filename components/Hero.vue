@@ -25,7 +25,7 @@
 						<p
 							class="is-size-5 is-size-6-mobile mt-2 is-italic has-text-grey-light"
 						>
-							Software Developer!!!!
+							Software Developer
 						</p>
 					</div>
 				</div>
