@@ -112,10 +112,12 @@ export default {
                     title: 'Experience',
                     present: 'present',
                     months: {
-                      nov: 'november'
+                      nov: 'november',
+                      mar: 'march'
                     },
                     labels: {
-                      backendDev: 'Backend developer'
+                      backendDev: 'Backend developer',
+                      tester: 'Test Automation Engineer - Ssr .NET developer'
                     }
                   }
                 }
@@ -187,10 +189,12 @@ export default {
                     title: 'Experiencia',
                     present: 'presente',
                     months: {
-                      nov: 'noviembre'
+                      nov: 'noviembre',
+                      mar: 'marzo'
                     },
                     labels: {
-                      backendDev: 'Desarrollador backend'
+                      backendDev: 'Desarrollador backend',
+                      tester: 'Test Automation Engineer - Desarrollador Ssr .NET'
                     }
                   }
                 }

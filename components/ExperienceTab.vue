@@ -11,7 +11,22 @@
 			<div class="timeline-marker is-info"></div>
 			<div class="timeline-content">
 				<p class="heading is-size-7">{{ experience.timespan }}</p>
-				<div
+				<div class="columns is-vcentered">
+					<div class="column is-narrow px-1">
+						<img
+							class="company-logo"
+							:src="
+								require(`~/assets/img/${experience.companyLogo}`)
+							"
+						/>
+					</div>
+					<div class="column is-narrow px-0">
+						<p class="title is-italic is-size-5">
+							{{ experience.companyName }}
+						</p>
+					</div>
+				</div>
+				<!-- <div
 					class="columns is-mobile is-varible is-1 is-vcentered mt-2"
 				>
 					<div
@@ -33,7 +48,7 @@
 							{{ experience.companyName }}
 						</p>
 					</div>
-				</div>
+				</div> -->
 
 				<div
 					class="columns is-mobile"
@@ -74,14 +89,23 @@
 				return [
 					{
 						timespan: `
-										${this.$t('main.tabs.expTab.months.nov')} 2020 - ${this.$t(
-							'main.tabs.expTab.present'
-						)}`,
+																																																							${this.$t('main.tabs.expTab.months.nov')} 2020 - ${this.$t(
+							'main.tabs.expTab.months.mar'
+						)} 2021`,
 						companyName: 'Devactory Software House',
 						companyLogo: 'devactory.png',
 						description: `${this.$t(
 							'main.tabs.expTab.labels.backendDev'
 						)} (NodeJS, SailsJS, MySQL)`
+					},
+					{
+						timespan: `
+																																																							${this.$t('main.tabs.expTab.months.mar')} 2021 - ${this.$t(
+							'main.tabs.expTab.present'
+						)}`,
+						companyName: 'Globant',
+						companyLogo: 'globant.png',
+						description: `${this.$t('main.tabs.expTab.labels.tester')}`
 					}
 				];
 			}
@@ -113,3 +137,8 @@
 		}
 	};
 </script>
+<style lang="scss" scoped>
+	.company-logo {
+		max-width: 3rem;
+	}
+</style>
