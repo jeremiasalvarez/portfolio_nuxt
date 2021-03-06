@@ -11,7 +11,8 @@
     "lint": "npm run lint:js",
     "lint-fix": "npm run lint --fix",
     "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
-    "deploy": "npm install push-dir --save-dev && npm run generate && push-dir --dir=dist --branch=master --cleanup --force"
+    "deploy": "npm install push-dir --save-dev && npm run generate && push-dir --dir=dist --branch=master --cleanup --force",
+    "fast-push": "git add . && git commit -m 'fast-push' && git push origin_nuxt"
   },
   "dependencies": {
     "@creativebulma/bulma-divider": "^1.1.0",
