@@ -81,10 +81,10 @@
 						name: 'React JS'
 					},
 					{
-						name: 'Bootstrap'
+						name: 'Bulma (Buefy)'
 					},
 					{
-						name: 'Bulma (Buefy)'
+						name: 'Bootstrap'
 					}
 				],
 				windowWidth: window.innerWidth,

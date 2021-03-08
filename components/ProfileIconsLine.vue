@@ -1,8 +1,7 @@
 <template>
 	<div class="column" :class="isMobile ? 'is-6' : 'is-2'">
 		<div
-			class="columns is-desktop is-variable is-1 is-vcentered"
-			:class="isMobile ? 'is-justify-content-flex-start is-mobile' : ''"
+			class="columns is-desktop is-variable is-1 is-vcentered is-centered is-mobile"
 		>
 			<div
 				v-for="(icon, index) in icons"
