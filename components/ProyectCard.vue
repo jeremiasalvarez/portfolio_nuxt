@@ -79,6 +79,7 @@
 								v-for="(link, index) in projectModel.links"
 								:key="index"
 								:href="link.href"
+								target="_blank"
 							>
 								<b-button
 									expanded

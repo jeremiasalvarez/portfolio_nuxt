@@ -11,7 +11,7 @@
 				:class="isMobile ? 'is-narrow' : ''"
 			>
 				<b-tooltip :label="icon.tooltipLabel" type="is-info">
-					<a class="icon-hover" :href="icon.href">
+					<a class="icon-hover" :href="icon.href" target="_blank">
 						<div class="icon-border">
 							<b-icon
 								:pack="icon.pack"
