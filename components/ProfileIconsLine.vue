@@ -1,7 +1,8 @@
 <template>
 	<div class="column" :class="isMobile ? 'is-6' : 'is-2'">
 		<div
-			class="columns is-desktop is-variable is-1 is-vcentered is-centered is-mobile"
+			class="columns is-desktop is-variable is-1 is-vcentered is-mobile"
+			:class="isFooter ? 'is-centered' : ''"
 		>
 			<div
 				v-for="(icon, index) in icons"

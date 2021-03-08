@@ -12,7 +12,11 @@
 			<div class="column is-2">
 				<div
 					class="columns is-mobile is-vcentered is-gapless mb-2"
-					:class="[windowWidth > 768 ? '' : 'is-centered']"
+					:class="[
+						windowWidth > 768
+							? ''
+							: 'is-centered w90 is-variable is-2'
+					]"
 				>
 					<div class="column is-justify-content-flex-start is-narrow">
 						<h4>
@@ -23,7 +27,7 @@
 					</div>
 					<div
 						class="column"
-						:class="[windowWidth > 768 ? 'is-10' : 'is-5']"
+						:class="[windowWidth > 768 ? 'is-8' : 'is-5']"
 					>
 						<p>Chaco, Argentina</p>
 					</div>
@@ -41,7 +45,9 @@
 				</div>
 				<div
 					class="columns is-variable is-3 is-vcentered mb-0"
-					:class="[windowWidth < 768 ? 'is-mobile is-centered' : '']"
+					:class="[
+						windowWidth < 768 ? 'is-mobile is-centered w90' : ''
+					]"
 				>
 					<div class="column is-narrow">
 						<h4>
@@ -62,7 +68,10 @@
 					"
 					class="columns is-variable is-vcentered mb-0 w90"
 				>
-					<div class="column is-narrow">
+					<div
+						class="column is-narrow"
+						:class="{ 'pr-5': windowWidth < 768 }"
+					>
 						<h4><strong>Email:</strong></h4>
 					</div>
 					<div
