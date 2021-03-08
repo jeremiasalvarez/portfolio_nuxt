@@ -117,7 +117,7 @@ export default {
                     },
                     labels: {
                       backendDev: 'Backend developer',
-                      tester: 'Test Automation Engineer - Ssr .NET developer'
+                      tester: 'Test Automation Engineer - .NET developer'
                     }
                   }
                 }
@@ -194,7 +194,7 @@ export default {
                     },
                     labels: {
                       backendDev: 'Desarrollador backend',
-                      tester: 'Test Automation Engineer - Desarrollador Ssr .NET'
+                      tester: 'Test Automation Engineer - Desarrollador .NET'
                     }
                   }
                 }
