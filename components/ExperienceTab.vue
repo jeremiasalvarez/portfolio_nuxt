@@ -4,7 +4,7 @@
 			<span class="tag is-small is-info"></span>
 		</header>
 		<div
-			v-for="(experience, index) in experienceArray"
+			v-for="(experience, index) in experienceArray.slice().reverse()"
 			:key="index"
 			class="timeline-item is-info"
 		>
@@ -89,7 +89,7 @@
 				return [
 					{
 						timespan: `
-																																																							${this.$t('main.tabs.expTab.months.nov')} 2020 - ${this.$t(
+																																																								${this.$t('main.tabs.expTab.months.nov')} 2020 - ${this.$t(
 							'main.tabs.expTab.months.mar'
 						)} 2021`,
 						companyName: 'Devactory Software House',
@@ -100,7 +100,7 @@
 					},
 					{
 						timespan: `
-																																																							${this.$t('main.tabs.expTab.months.mar')} 2021 - ${this.$t(
+																																																								${this.$t('main.tabs.expTab.months.mar')} 2021 - ${this.$t(
 							'main.tabs.expTab.present'
 						)}`,
 						companyName: 'Globant',

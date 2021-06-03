@@ -27,7 +27,7 @@
 					</div>
 					<div
 						class="column"
-						:class="[windowWidth > 768 ? 'is-8' : 'is-5']"
+						:class="[windowWidth > 768 ? 'is-9' : 'is-5']"
 					>
 						<p>Chaco, Argentina</p>
 					</div>
