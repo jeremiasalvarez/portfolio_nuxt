@@ -44,7 +44,7 @@
 						pack: 'fab',
 						name: 'linkedin-in',
 						tooltipLabel: this.$t('other.tooltips.linkedin'),
-						href: 'https://www.linkedin.com/in/jeremiasalvarezdev/'
+						href: 'https://www.linkedin.com/in/jeremiasalvarez34'
 					}
 				];
 			}
